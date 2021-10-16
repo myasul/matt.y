@@ -12,15 +12,14 @@ const FooterContainer = styled.footer`
     border-top: 1px solid black;
     display: flex;
     justify-content: space-between;
-    align-self: center;
+    align-items: center;
+    min-height: 5vh;
+    width: 95%;
+
     a {
         text-decoration: none;
         color: black;
     }
-    padding: 0.8rem 0;
-    margin: 0 10px;
-    flex-shrink: 0;
-    width: 100%;
 `
 
 const FooterIconContainer = styled.div`

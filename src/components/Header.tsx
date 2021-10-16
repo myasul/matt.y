@@ -13,7 +13,7 @@ const HeaderContainer = styled.header`
         text-decoration: none;
         color: black;
     }
-    flex-shrink: 0;
+    width: 95%;
 `
 
 const HeaderItems = styled.div`

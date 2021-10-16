@@ -11,6 +11,8 @@ import { Footer } from './Footer'
 const GlobalStyle = createGlobalStyle`
     body {
         font-family: 'Open Sans', sans-serif;
+        margin: 0;
+        padding: 0;
     }
 `
 
@@ -30,11 +32,13 @@ type Props = {
 const LayoutBody = styled.div`
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    align-items: center;
+    min-height: 100vh;
+    overflow: auto;
 `
 
 const LayoutChildrenContainer = styled.div`
-    flex: 1 0 auto;
+    flex: 1;
 `
 
 export const Layout = ({ children }: Props) => {
