@@ -1,11 +1,12 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { ReactNode } from 'react'
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 import { SiteInfo, AuthorInfo } from '../types/siteMetadata'
 
 import { Header } from './Header'
 import { LayoutMeta } from './LayoutMeta'
+import { Footer } from './Footer'
 
 const GlobalStyle = createGlobalStyle`
     body {
@@ -25,6 +26,16 @@ type LayoutData = {
 type Props = {
     children: ReactNode
 }
+
+const LayoutBody = styled.div`
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+`
+
+const LayoutChildrenContainer = styled.div`
+    flex: 1 0 auto;
+`
 
 export const Layout = ({ children }: Props) => {
     const { site: { siteMetadata: { siteInfo, authorInfo } } } = useStaticQuery<LayoutData>(
@@ -60,8 +71,13 @@ export const Layout = ({ children }: Props) => {
         <div>
             <GlobalStyle />
             <LayoutMeta title={siteInfo.title} description={siteInfo.description} />
-            <Header title={siteInfo.title} />
-            {children}
+            <LayoutBody>
+                <Header title={siteInfo.title} />
+                <LayoutChildrenContainer>
+                    {children}
+                </LayoutChildrenContainer>
+                <Footer authorInfo={authorInfo} />
+            </LayoutBody>
         </div>
     )
 }

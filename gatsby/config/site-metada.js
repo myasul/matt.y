@@ -10,7 +10,7 @@ module.exports = {
     },
     authorInfo: {
         name: "Matt Yasul",
-        description: "Update this.",
+        description: "Building things one cup of coffee at a time.",
         email: "yasulmatthew@gmail.com",
         jobTitle: "Software Developer",
         profiles: {
