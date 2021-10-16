@@ -5,10 +5,11 @@ import { createGlobalStyle } from 'styled-components'
 import { SiteInfo, AuthorInfo } from '../types/siteMetadata'
 
 import { Header } from './Header'
+import { LayoutMeta } from './LayoutMeta'
 
 const GlobalStyle = createGlobalStyle`
     body {
-        font-family: 'BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans - serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"';
+        font-family: 'Open Sans', sans-serif;
     }
 `
 
@@ -26,7 +27,7 @@ type Props = {
 }
 
 export const Layout = ({ children }: Props) => {
-    const data = useStaticQuery<LayoutData>(
+    const { site: { siteMetadata: { siteInfo, authorInfo } } } = useStaticQuery<LayoutData>(
         graphql`
             query { 
                 site {
@@ -57,7 +58,9 @@ export const Layout = ({ children }: Props) => {
 
     return (
         <div>
-            <Header title={data.site.siteMetadata.siteInfo.title} />
+            <GlobalStyle />
+            <LayoutMeta title={siteInfo.title} description={siteInfo.description} />
+            <Header title={siteInfo.title} />
             {children}
         </div>
     )
