@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "allowJs": false,
+        "allowSyntheticDefaultImports": false,
+        "esModuleInterop": true,
+        "baseUrl": "./",
+        "rootDir": "./",
+        "jsx": "react-jsx",
+        "module": "es6",
+        "moduleResolution": "Node",
+        "noEmit": true,
+        "pretty": true,
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "resolveJsonModule": true,
+        "lib": ["ES2015", "DOM"],
+        "strictNullChecks": true
+    },
+    "exclude": ["node_modules", "**/node_modules/*"],
+    "include": ["src/**/*"]
+}

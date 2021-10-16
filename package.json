@@ -14,11 +14,15 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "babel-plugin-styled-components": "^1.13.2",
     "gatsby": "^4.0.0-zz-next.1",
+    "gatsby-plugin-styled-components": "^4.14.0",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "styled-components": "^5.3.1"
   },
   "devDependencies": {
+    "@types/styled-components": "^5.1.15",
     "prettier": "2.3.2"
   },
   "repository": {
