@@ -36,16 +36,16 @@ export const Footer = ({ authorInfo }: Props) => {
         <FooterContainer>
             <div>&copy;{name}</div>
             <FooterIconContainer>
-                <a href={profiles.facebook}>
+                <a href={profiles.facebook} target="_blank">
                     <Facebook />
                 </a>
-                <a href={profiles.instagram}>
+                <a href={profiles.instagram} target="_blank">
                     <Instagram />
                 </a>
-                <a href={profiles.linkedin}>
+                <a href={profiles.linkedin} target="_blank">
                     <Linkedin />
                 </a>
-                <a href={profiles.github}>
+                <a href={profiles.github} target="_blank">
                     <GitHub />
                 </a>
             </FooterIconContainer>
