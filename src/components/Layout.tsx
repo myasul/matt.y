@@ -10,7 +10,7 @@ import { Footer } from './Footer'
 
 const GlobalStyle = createGlobalStyle`
     body {
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Comfortaa', cursive;
         margin: 0;
         padding: 0;
     }
