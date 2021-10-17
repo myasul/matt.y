@@ -13,7 +13,8 @@ const HeaderContainer = styled.header`
         text-decoration: none;
         color: black;
     }
-    width: 95%;
+    width: 100%;
+    box-shadow: 0 5px 20px -10px #000;
 `
 
 const HeaderItems = styled.div`
@@ -22,11 +23,15 @@ const HeaderItems = styled.div`
     justify-content: space-around;
 `
 
+const Title = styled.h2`
+    margin-left: 1rem;
+`
+
 
 export const Header = ({ title }: Props) => {
     return (
         <HeaderContainer>
-            <h2><Link to='/'>{title}</Link></h2>
+            <Title><Link to='/'>{title}</Link></Title>
             <HeaderItems>
                 <h2><Link to='/blog'>Blog</Link></h2>
                 <h2><Link to='/about'>About</Link></h2>
