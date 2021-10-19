@@ -7,4 +7,4 @@ Hey! I'm Matt! I'm a software developer living in the Philippines (Oo, Pinoy ako
 
 I currently work at [Okra Solar](https://www.okrasolar.com). We hustle really hard so that we can provide reliable access to power to those people still living off the grid (without electricity).
 
-Please always feel free to say hi! I'm always happy to talk about technology, coffee, food, and anything in between (Filipinos love to gossiip!)!.
+Please always feel free to say hi! I'm always happy to talk about technology, coffee, food, and anything in between!
