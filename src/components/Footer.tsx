@@ -16,7 +16,7 @@ const FooterContainer = styled.footer`
     align-items: center;
     min-height: 5vh;
     width: 100%;
-    max-width: 80vw;
+    max-width: 65vw;
 
     a {
         text-decoration: none;
@@ -27,7 +27,7 @@ const FooterContainer = styled.footer`
 const FooterIconContainer = styled.div`
     display: flex;
     justify-content: space-evenly;
-    min-width: 15%;
+    min-width: 20%;
 `
 
 export const Footer = ({ authorInfo }: Props) => {

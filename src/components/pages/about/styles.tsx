@@ -3,12 +3,15 @@ import styled from 'styled-components'
 export const AboutContainer = styled.div`
     display: flex;
     flex-direction: column;
+    max-width: 65vw;
+    margin-top: 3rem;
 `
 
 export const AboutDescription = styled.div`
     width: 50%;
-    margin-left: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    text-align: left;
     p {
         margin-top: 0;
     }
@@ -16,9 +19,8 @@ export const AboutDescription = styled.div`
 
 export const AboutBody = styled.div`
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-start;
-    padding: 0 1rem;
 `
 
 export const AboutImageContainer = styled.div`
@@ -26,5 +28,5 @@ export const AboutImageContainer = styled.div`
 `
 
 export const AboutHeader = styled.h1`
-    text-align: center;
+    text-align: left;
 `

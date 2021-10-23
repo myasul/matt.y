@@ -25,7 +25,7 @@ const HeaderBody = styled.div`
         color:rgb(69, 73, 99) !important;
     }
     margin: auto;
-    max-width: 80vw;
+    max-width: 65vw;
 `
 
 
