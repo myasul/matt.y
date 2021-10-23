@@ -2,9 +2,8 @@ import styled from 'styled-components'
 
 export const AboutContainer = styled.div`
     display: flex;
-    flex-direction: column;
-    max-width: 65vw;
     margin-top: 3rem;
+    justify-content: space-evenly;
 `
 
 export const AboutDescription = styled.div`
@@ -12,15 +11,10 @@ export const AboutDescription = styled.div`
     font-size: 1.2rem;
     line-height: 2rem;
     text-align: left;
+    color: rgb(69, 73, 99);
     p {
         margin-top: 0;
     }
-`
-
-export const AboutBody = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
 `
 
 export const AboutImageContainer = styled.div`
@@ -28,5 +22,6 @@ export const AboutImageContainer = styled.div`
 `
 
 export const AboutHeader = styled.h1`
+    color: black;
     text-align: left;
 `

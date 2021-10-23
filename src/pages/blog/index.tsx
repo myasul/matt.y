@@ -2,11 +2,11 @@ import { graphql } from 'gatsby'
 import React, { useEffect, useState } from 'react'
 
 import { Blog } from '../../components/pages/blog/Blog'
-import { PostHighlights } from '../../components/pages/blog/types'
+import { BlogHighlights } from '../../components/pages/blog/types'
 import { BlogQuery } from './types'
 
 const BlogPage = ({ data }: { data: BlogQuery }) => {
-    const [highlights, setHighlights] = useState<PostHighlights[]>([])
+    const [highlights, setHighlights] = useState<BlogHighlights[]>([])
 
     useEffect(() => {
         const { allMarkdownRemark: { edges } } = data

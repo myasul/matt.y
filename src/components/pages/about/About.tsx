@@ -23,15 +23,13 @@ export const About = ({ authorDescriptionInHtml, authorInfo, authorImageFluid }:
         <Layout>
             <AboutMeta name={authorInfo.name} description={authorInfo.description} />
             <AboutContainer>
-                <AboutBody style={{ display: 'flex' }}>
-                    <AboutDescription>
-                        <AboutHeader>Matt Yasul</AboutHeader>
-                        <div dangerouslySetInnerHTML={{ __html: authorDescriptionInHtml }} />
-                    </AboutDescription>
-                    <AboutImageContainer>
-                        <Img alt={`${authorInfo.name}'s picture`} fluid={authorImageFluid} />
-                    </AboutImageContainer>
-                </AboutBody>
+                <AboutDescription>
+                    <AboutHeader>Matt Yasul</AboutHeader>
+                    <div dangerouslySetInnerHTML={{ __html: authorDescriptionInHtml }} />
+                </AboutDescription>
+                <AboutImageContainer>
+                    <Img alt={`${authorInfo.name}'s picture`} fluid={authorImageFluid} />
+                </AboutImageContainer>
             </AboutContainer>
         </Layout>
     )

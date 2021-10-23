@@ -18,14 +18,16 @@ const HeaderItems = styled.div`
 `
 
 const HeaderBody = styled.div`
+    max-width: 1200px;
     display: flex;
     justify-content: space-between;
     a {
+        font-size: 1.1rem;
         text-decoration: none;
         color:rgb(69, 73, 99) !important;
     }
-    margin: auto;
-    max-width: 65vw;
+    margin: 0 auto;
+    padding: 0 1rem;
 `
 
 

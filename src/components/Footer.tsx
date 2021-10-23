@@ -15,8 +15,9 @@ const FooterContainer = styled.footer`
     justify-content: space-between;
     align-items: center;
     min-height: 5vh;
+    padding: 0 1rem;
+    margin: 0 auto;
     width: 100%;
-    max-width: 65vw;
 
     a {
         text-decoration: none;

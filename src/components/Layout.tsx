@@ -34,7 +34,8 @@ const LayoutBody = styled.div`
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    overflow: auto;
+    max-width: 1200px;
+    margin: 0 auto;
 `
 
 const LayoutChildrenContainer = styled.div`

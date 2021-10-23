@@ -1,17 +1,24 @@
-import React, { useEffect } from 'react'
+import React from 'react'
+
 import { Layout } from '../../Layout'
-import { PostHighlights } from './types'
+import { HighlightList } from './HighlightList'
+import { BlogContainer, BlogHeader } from './styles'
+import { BlogHighlights } from './types'
 
-type Props = {
-    highlights: PostHighlights[]
-}
 
-export const Blog = ({ highlights }: Props) => {
-    console.log(highlights)
-
+export const Blog = ({ highlights }: { highlights: BlogHighlights[] }) => {
     return (
         <Layout>
-            <div>This is my blog!</div>
+            <BlogContainer>
+                <BlogHeader>
+                    <h1>My Digital Sala</h1>
+                    <h3>
+                        Sala <i>(living room)</i> in Filipino is a room where you mingle with friends and family.
+                        It's a place where you share your ideas, adventures, learnings and such. My digital sala is filled with the same things along with my notes, rants, and everything in between.
+                    </h3>
+                </BlogHeader>
+                <HighlightList highlights={highlights} />
+            </BlogContainer>
         </Layout>
     )
 }
