@@ -8,7 +8,7 @@ type Props = {
 
 const HeaderContainer = styled.header`
     width: 100vw;
-    box-shadow: 0 5px 20px -10px #000;
+    box-shadow: 0 5px 22px -20px #000;
 `
 
 const HeaderItems = styled.div`
