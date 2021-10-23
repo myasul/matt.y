@@ -9,48 +9,48 @@ type Props = {
 }
 
 const FooterContainer = styled.footer`
-    border-top: 1px solid black;
+    font-size: 1.1rem;
+    color: rgb(69, 73, 99);
     display: flex;
     justify-content: space-between;
     align-items: center;
     min-height: 5vh;
-    width: 95%;
+    width: 100%;
+    max-width: 80vw;
 
     a {
         text-decoration: none;
-        color: black;
+        color: rgb(69, 73, 99);
     }
 `
 
 const FooterIconContainer = styled.div`
     display: flex;
     justify-content: space-evenly;
-    min-width: 25%;
+    min-width: 15%;
 `
 
 export const Footer = ({ authorInfo }: Props) => {
-    const { name, email, profiles } = authorInfo
+    const { name, profiles } = authorInfo
+    const currentYear = new Date().getFullYear()
 
     return (
         <FooterContainer>
-            <div>&copy;{name}</div>
+            <div>{name} &copy; {currentYear}</div>
             <FooterIconContainer>
                 <a href={profiles.facebook} target="_blank">
-                    <Facebook />
+                    <Facebook size='28' />
                 </a>
                 <a href={profiles.instagram} target="_blank">
-                    <Instagram />
+                    <Instagram size='28' />
                 </a>
                 <a href={profiles.linkedin} target="_blank">
-                    <Linkedin />
+                    <Linkedin size='28' />
                 </a>
                 <a href={profiles.github} target="_blank">
-                    <GitHub />
+                    <GitHub size='28' />
                 </a>
             </FooterIconContainer>
-            <div>
-                <a href={`mailto:${email}`}>Contact Me</a>
-            </div>
         </FooterContainer>
     )
 }

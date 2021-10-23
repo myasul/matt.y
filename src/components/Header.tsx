@@ -7,35 +7,38 @@ type Props = {
 }
 
 const HeaderContainer = styled.header`
-    display: flex;
-    justify-content: space-between;
-    a {
-        text-decoration: none;
-        color: black;
-    }
-    width: 100%;
+    width: 100vw;
     box-shadow: 0 5px 20px -10px #000;
 `
 
 const HeaderItems = styled.div`
     display: flex;
-    min-width: 40%;
-    justify-content: space-around;
+    min-width: 25%;
+    justify-content: space-between;
 `
 
-const Title = styled.h2`
-    margin-left: 1rem;
+const HeaderBody = styled.div`
+    display: flex;
+    justify-content: space-between;
+    a {
+        text-decoration: none;
+        color:rgb(69, 73, 99) !important;
+    }
+    margin: auto;
+    max-width: 80vw;
 `
 
 
 export const Header = ({ title }: Props) => {
     return (
         <HeaderContainer>
-            <Title><Link to='/'>{title}</Link></Title>
-            <HeaderItems>
-                <h2><Link to='/blog'>Blog</Link></h2>
-                <h2><Link to='/about'>About</Link></h2>
-            </HeaderItems>
+            <HeaderBody>
+                <h2><Link to='/'>{title}</Link></h2>
+                <HeaderItems>
+                    <h2><Link to='/blog'>Blog</Link></h2>
+                    <h2><Link to='/about'>About</Link></h2>
+                </HeaderItems>
+            </HeaderBody>
         </HeaderContainer>
     )
 }
