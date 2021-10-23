@@ -1,4 +1,5 @@
 import { FluidObject } from 'gatsby-image'
+import { AuthorInfo } from '../../components/pages/about/types'
 
 type Edge = {
     node: {
@@ -11,11 +12,6 @@ type Edge = {
             }
         }
     }
-}
-
-export type AuthorInfo = {
-    name: string
-    description: string
 }
 
 export type AboutQuery = {

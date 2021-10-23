@@ -8,6 +8,7 @@ export const AboutContainer = styled.div`
 export const AboutDescription = styled.div`
     width: 50%;
     margin-left: 1rem;
+    font-size: 1.5rem;
     p {
         margin-top: 0;
     }
