@@ -5,7 +5,6 @@ import { AboutMeta } from './AboutMeta'
 
 import { AuthorInfo } from './types'
 import {
-    AboutBody,
     AboutContainer,
     AboutDescription,
     AboutHeader,

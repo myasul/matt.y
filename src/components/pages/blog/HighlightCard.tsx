@@ -6,21 +6,26 @@ import { BlogHighlights } from './types'
 
 const Container = styled.div`
     border: 1px solid rgba(52, 61, 68, 0.05);
-    min-width: 15vw;
+    max-width: 15vw;
     grid-column: 1/4;
-    margin: 0.5rem auto;
-    padding: 0.5rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
     display: flex;
     flex-direction: column;
+    border-radius: 6px;
 `
 
-const Title = styled.h4`
-    height: 60%;
+const Title = styled.h3`
+    height: 70%;
 `
 
 const Metadata = styled.div`
     border-top: 1px solid rgb(235,236,242);
+    height: 30%;
     margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 `
 
 export const HighlightCard = ({ highlight }: { highlight: BlogHighlights }) => {

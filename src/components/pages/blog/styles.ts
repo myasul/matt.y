@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const BlogContainer = styled.div`
     margin: 2rem auto;
+    padding: 0 1rem;
     display: flex;
     flex-direction: column;
 `
@@ -16,6 +17,7 @@ export const BlogHeader = styled.section`
     }
     text-align: left;
     width: 70%;
+    margin-bottom: 2rem;
 `
 
 export const HighlightListContainer = styled.section`
