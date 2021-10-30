@@ -5,6 +5,8 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { Link } from 'gatsby'
 
 import { Layout } from '../../Layout'
+import { DateUtil } from '../../../utils/DateUtil'
+import { BlogContainer, BodyContainer, Title, TitleContainer, TitleMeta } from './styles'
 
 
 type BlogQueryData = {
@@ -28,11 +30,19 @@ const Blog = ({ data }: Props) => {
 
     return (
         <Layout>
-            <h1>{frontmatter.title}</h1>
-            <h6>{new Date(frontmatter.published).toDateString()}</h6>
-            <MDXProvider components={shortcodes}>
-                <MDXRenderer frontmatter={frontmatter}>{body}</MDXRenderer>
-            </MDXProvider>
+            <BlogContainer>
+                <TitleContainer>
+                    <Title>{frontmatter.title}</Title>
+                    <TitleMeta>
+                        <h6>Last Updated {DateUtil.toAbbrevDateTime(new Date(frontmatter.published))}</h6>
+                    </TitleMeta>
+                </TitleContainer>
+                <BodyContainer>
+                    <MDXProvider components={shortcodes}>
+                        <MDXRenderer frontmatter={frontmatter}>{body}</MDXRenderer>
+                    </MDXProvider>
+                </BodyContainer>
+            </BlogContainer>
         </Layout>
     )
 }
