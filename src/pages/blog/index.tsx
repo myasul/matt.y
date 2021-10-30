@@ -2,14 +2,14 @@ import { graphql } from 'gatsby'
 import React, { useEffect, useState } from 'react'
 
 import { Blog } from '../../components/pages/blog/Blog'
-import { BlogHighlights } from '../../components/pages/blog/types'
+import { BlogHighlights } from '../../components/types'
 import { BlogQuery } from './types'
 
 const BlogPage = ({ data }: { data: BlogQuery }) => {
     const [highlights, setHighlights] = useState<BlogHighlights[]>([])
 
     useEffect(() => {
-        const { allMarkdownRemark: { edges } } = data
+        const { allMdx: { edges } } = data
         const postHighlights = edges.map(edge => ({
             title: edge.node.frontmatter.title,
             published: edge.node.frontmatter.published
@@ -23,7 +23,7 @@ const BlogPage = ({ data }: { data: BlogQuery }) => {
 
 export const blogQuery = graphql`
     query Blog {
-        allMarkdownRemark(
+        allMdx(
             sort: {fields: frontmatter___published, order: DESC}
             filter: {frontmatter: {type: {eq: "post"}}}
         ) {

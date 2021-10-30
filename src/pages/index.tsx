@@ -15,7 +15,7 @@ type Edge = {
 }
 
 export type HomeQuery = {
-    allMarkdownRemark: {
+    allMdx: {
         edges: Edge[]
     }
 }
@@ -24,7 +24,7 @@ const HomePage = ({ data }: { data: HomeQuery }) => {
     const [highlights, setHighlights] = useState<BlogHighlights[]>([])
 
     useEffect(() => {
-        const { allMarkdownRemark: { edges } } = data
+        const { allMdx: { edges } } = data
         const postHighlights = edges.map(edge => ({
             title: edge.node.frontmatter.title,
             published: edge.node.frontmatter.published
@@ -38,7 +38,7 @@ const HomePage = ({ data }: { data: HomeQuery }) => {
 
 export const homeQuery = graphql`
     query Home {
-        allMarkdownRemark(
+        allMdx(
             sort: {fields: frontmatter___published, order: DESC}
             filter: {frontmatter: {type: {eq: "post"}}}
         ) {

@@ -8,27 +8,27 @@ import { Layout } from '../../components/Layout'
 import { AboutQuery } from './types'
 
 const AboutPage = ({ data }: { data: AboutQuery }) => {
-    const [aboutHtml, setAboutHtml] = useState<string>()
+    const [aboutBody, setAboutBody] = useState<string>()
     const [authorInfo, setAuthorInfo] = useState<AuthorInfo>()
     const [authorImageFluid, setAuthorImageFluid] = useState<FluidObject>()
 
     useEffect(() => {
-        const { allMarkdownRemark: { edges }, site: { siteMetadata: { authorInfo } } } = data
+        const { allMdx: { edges }, site: { siteMetadata: { authorInfo } } } = data
 
         if (!edges.length) throw new Error('About me content not found.')
 
-        const { html, frontmatter: { featured: { childImageSharp: { fluid } } } } = edges[0].node
+        const { body, frontmatter: { featured: { childImageSharp: { fluid } } } } = edges[0].node
 
-        setAboutHtml(html)
+        setAboutBody(body)
         setAuthorImageFluid(fluid)
         setAuthorInfo(authorInfo)
     }, [data])
 
     return (
-        (authorInfo && aboutHtml && authorImageFluid)
+        (authorInfo && aboutBody && authorImageFluid)
         ? (
             <About
-                authorDescriptionInHtml={aboutHtml}
+                authorDescriptionBody={aboutBody}
                 authorInfo={authorInfo}
                 authorImageFluid={authorImageFluid}
             />
@@ -49,7 +49,7 @@ export const aboutQuery = graphql`
             }
         }
 
-        allMarkdownRemark(filter: {frontmatter: {type: {eq: "about-me"}}}) {
+        allMdx(filter: {frontmatter: {type: {eq: "about-me"}}}) {
             edges {
                 node {
                     frontmatter {
@@ -61,7 +61,7 @@ export const aboutQuery = graphql`
                             }
                         }
                     }
-                    html
+                    body
                 }
             }
         }

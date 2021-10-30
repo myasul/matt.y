@@ -3,7 +3,7 @@ import { AuthorInfo } from '../../components/pages/about/types'
 
 type Edge = {
     node: {
-        html: string
+        body: string
         frontmatter: {
             featured: {
                 childImageSharp: {
@@ -15,7 +15,7 @@ type Edge = {
 }
 
 export type AboutQuery = {
-    allMarkdownRemark: {
+    allMdx: {
         edges: Edge[]
     }
     site: {

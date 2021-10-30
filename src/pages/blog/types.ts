@@ -1,6 +1,6 @@
 type Edge = {
     node: {
-        html: string
+        body: string
         frontmatter: {
             title: string
             published: string
@@ -9,7 +9,7 @@ type Edge = {
 }
 
 export type BlogQuery = {
-    allMarkdownRemark: {
+    allMdx: {
         edges: Edge[]
     }
 }
