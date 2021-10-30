@@ -10,10 +10,11 @@ const BlogPage = ({ data }: { data: BlogQuery }) => {
 
     useEffect(() => {
         const { allMdx: { edges } } = data
-        const postHighlights = edges.map(edge => ({
-            title: edge.node.frontmatter.title,
-            published: edge.node.frontmatter.published
-        }))
+        const postHighlights = edges.map(edge => {
+            const { node: { frontmatter: { title, published, slug } } } = edge
+
+            return { title, published, slug }
+        })
 
         setHighlights(postHighlights)
     }, [data])
@@ -32,6 +33,7 @@ export const blogQuery = graphql`
                     frontmatter {
                         title
                         published
+                        slug
                     }
                 }
             }

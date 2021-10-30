@@ -4,6 +4,7 @@ type Edge = {
         frontmatter: {
             title: string
             published: string
+            slug: string
         }
     }
 }

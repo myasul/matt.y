@@ -1,3 +1,4 @@
+import { Link } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
 import { DateUtil } from '../../../utils/DateUtil'
@@ -52,10 +53,12 @@ const Metadata = styled.div`
 export const HighlightCard = ({ highlight }: { highlight: BlogHighlights }) => {
     return (
         <Container>
-            <Title>{highlight.title}</Title>
-            <Metadata>
-                <h6>{DateUtil.toAbbrevDateTime(new Date(highlight.published))}</h6>
-            </Metadata>
+            <Link to={`/blog/${highlight.slug}`}>
+                <Title>{highlight.title}</Title>
+                <Metadata>
+                    <h6>{DateUtil.toAbbrevDateTime(new Date(highlight.published))}</h6>
+                </Metadata>
+            </Link>
         </Container>
     )
 }

@@ -6,7 +6,7 @@ import { BlogHighlights } from '../components/types'
 
 type Edge = {
     node: {
-        html: string
+        body: string
         frontmatter: {
             title: string
             published: string
