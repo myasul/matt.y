@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { DateUtil } from '../../../utils/DateUtil'
 
-import { BlogHighlights } from './types'
+import { BlogHighlights } from '../../types'
 
 const Container = styled.div`
     border: 1px solid rgba(52, 61, 68, 0.05);

@@ -1,8 +1,57 @@
-import * as React from 'react'
+import { graphql } from 'gatsby'
+import React, { useEffect, useState } from 'react'
 import { Layout } from '../components/Layout'
+import { Home } from '../components/pages/home/Home'
+import { BlogHighlights } from '../components/types'
 
-export default function Home () {
-    return (
-        <Layout>Hello world!</Layout>
-    )
+type Edge = {
+    node: {
+        html: string
+        frontmatter: {
+            title: string
+            published: string
+        }
+    }
 }
+
+export type HomeQuery = {
+    allMarkdownRemark: {
+        edges: Edge[]
+    }
+}
+
+const HomePage = ({ data }: { data: HomeQuery }) => {
+    const [highlights, setHighlights] = useState<BlogHighlights[]>([])
+
+    useEffect(() => {
+        const { allMarkdownRemark: { edges } } = data
+        const postHighlights = edges.map(edge => ({
+            title: edge.node.frontmatter.title,
+            published: edge.node.frontmatter.published
+        }))
+
+        setHighlights(postHighlights)
+    }, [data])
+
+    return <Home highlights={highlights}/>
+}
+
+export const homeQuery = graphql`
+    query Home {
+        allMarkdownRemark(
+            sort: {fields: frontmatter___published, order: DESC}
+            filter: {frontmatter: {type: {eq: "post"}}}
+        ) {
+            edges {
+                node {
+                    frontmatter {
+                        title
+                        published
+                    }
+                }
+            }
+        }
+    }
+`
+
+export default HomePage

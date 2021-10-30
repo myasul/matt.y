@@ -18,6 +18,7 @@ const FooterContainer = styled.footer`
     padding: 0 1rem;
     margin: 0 auto;
     width: 100%;
+    margin-bottom: 1.5rem;
 
     a {
         text-decoration: none;

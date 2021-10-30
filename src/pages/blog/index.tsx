@@ -12,8 +12,7 @@ const BlogPage = ({ data }: { data: BlogQuery }) => {
         const { allMarkdownRemark: { edges } } = data
         const postHighlights = edges.map(edge => ({
             title: edge.node.frontmatter.title,
-            published: edge.node.frontmatter.published,
-            description: edge.node.frontmatter.description
+            published: edge.node.frontmatter.published
         }))
 
         setHighlights(postHighlights)
@@ -32,7 +31,6 @@ export const blogQuery = graphql`
                 node {
                     frontmatter {
                         title
-                        description
                         published
                     }
                 }

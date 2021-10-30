@@ -3,7 +3,6 @@ type Edge = {
         html: string
         frontmatter: {
             title: string
-            description: string
             published: string
         }
     }

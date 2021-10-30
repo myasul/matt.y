@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
 
-import { BlogHighlights } from './types'
+import { BlogHighlights } from '../../types'
 import { HighlightListContainer } from './styles'
 import { HighlightCard } from './HighlightCard'
 
