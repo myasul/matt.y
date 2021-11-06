@@ -15,9 +15,10 @@ const FooterContainer = styled.footer`
     justify-content: space-between;
     align-items: center;
     min-height: 5vh;
-    padding: 0 1rem;
+    /* padding: 0 1rem; */
     margin: 0 auto;
     width: 100%;
+    margin-top: 1.5rem;
     margin-bottom: 1.5rem;
 
     a {
@@ -32,13 +33,18 @@ const FooterIconContainer = styled.div`
     min-width: 20%;
 `
 
+const CopyrightContainer = styled.div`
+    min-width: 20%;
+    margin-left: 1rem;
+`
+
 export const Footer = ({ authorInfo }: Props) => {
     const { name, profiles } = authorInfo
     const currentYear = new Date().getFullYear()
 
     return (
         <FooterContainer>
-            <div>{name} &copy; {currentYear}</div>
+            <CopyrightContainer>{name} &copy; {currentYear}</CopyrightContainer>
             <FooterIconContainer>
                 <a href={profiles.facebook} target="_blank">
                     <Facebook size='28' />

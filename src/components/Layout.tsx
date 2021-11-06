@@ -15,12 +15,13 @@ const GlobalStyle = createGlobalStyle`
         padding: 0;
     }
 
-    a {color: rgb(0, 161, 227);
+    a {
+        color: rgb(0, 161, 227);
         text-decoration: none;
         transition: all 0.4s ease 0s;
         
         :hover {
-        color: #ed7842
+            color: #ed7842
         }
     }
 `

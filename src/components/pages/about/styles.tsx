@@ -2,7 +2,8 @@ import styled from 'styled-components'
 
 export const AboutContainer = styled.div`
     display: flex;
-    margin-top: 3rem;
+    height: 85%;
+    padding-top: 3rem;
     justify-content: space-evenly;
 `
 
@@ -18,7 +19,7 @@ export const AboutDescription = styled.div`
 `
 
 export const AboutImageContainer = styled.div`
-    width: 40%;
+    width: 37%;
 `
 
 export const AboutHeader = styled.h1`
