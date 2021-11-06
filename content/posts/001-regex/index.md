@@ -43,6 +43,7 @@ function trimTrailingSlash (route: string) {
 console.log(trimTrailingSlash('kopifohlayf.com/')) // kopifohlayf.com
 console.log(trimTrailingSlash('https://animeforevah.com////')) // https://animeforevah.com
 ```
+<br/>
 
 ### Build a file name
 
@@ -135,7 +136,7 @@ console.log(str.match(/[\w]/g)) // ['ABC','123']
 Putting it together the lookbehind group `(?<=[\w]{3}[\s])` would match any three alphanumeric characters and a space. But the lookbehind should have something from behind to have a match which is the second group `/(.)+/`. `.` basically is any character and `+` is a quantifier meaning at least one. So it would match all characters given that there is at least one character to match. And then we are just wrapping all the characters in one group by enclosing it in parentheses `()`.
 
 To sum it all up, `/(?<=[\w]{3}[\s])(.+)/g` would match any characters behind a three alphanumeric character followed by a space! Remember that the match would not include any pattern matched inside the lookbehind (the three characters (Mon, Tues, Wed, etc.) and the space that followed). That is why we are only getting anything after that which is the remaining date!
-```
+```typescript
 const date = 'Tue Oct 26 2021'
 console.log(date.match(`/(?<=[\w]{3}[\s])(.+)/g`)) // ['Oct 26 2021']
 ```

@@ -21,6 +21,16 @@ const Introduction = styled.section`
 
 const BlogSectionContainer = styled.section`
     margin-top: 5rem;
+    
+    a {
+        color: black;
+    }
+
+    h2 {
+        a:hover {
+            color: #ed7842 !important;
+        }
+    }
 
     h4 {
         width: 70%;
@@ -36,13 +46,13 @@ export const Home = ({ highlights }: { highlights: BlogHighlights[] }) => {
             <Introduction>
                 <h1>Hey, I'm Matt!</h1>
                 <h3>
-                    I'm a software developer at <a href='https://okrasolar.com' target='_blank'>Okra Solar</a>. 
+                    I'm a software developer at <a href='https://okrasolar.com' target='_blank'>Okra Solar</a>.
                     This website is my first open-source project where I share my thoughts, learnings, and ideas! Feel free to roam around and read about my shenanigans.
                     I hope you'll learn a thing or two afterwards!
                 </h3>
             </Introduction>
             <BlogSectionContainer>
-                <Link to='/blog'><h2>My Kwaderno</h2></Link>
+                <h2><Link to='/blog'>My Kwaderno</Link></h2>
                 <h4>Proin in mi sit amet nisi dictum sagittis. In rutrum enim eu orci molestie, vitae luctus dui tristique.</h4>
                 <HighlightList highlights={highlights} />
             </BlogSectionContainer>

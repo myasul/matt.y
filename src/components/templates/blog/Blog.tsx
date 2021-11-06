@@ -2,11 +2,11 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { MDXProvider } from '@mdx-js/react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-import { Link } from 'gatsby'
 
 import { Layout } from '../../Layout'
 import { DateUtil } from '../../../utils/DateUtil'
 import { BlogContainer, BodyContainer, Title, TitleContainer, TitleMeta } from './styles'
+import components from '../../mdx'
 
 
 type BlogQueryData = {
@@ -17,13 +17,11 @@ type BlogQueryData = {
         }
         body: string
     }
-}
+} 
 
 type Props = {
     data: BlogQueryData
 }
-
-const shortcodes = { Link }
 
 const Blog = ({ data }: Props) => {
     const { mdx: { frontmatter, body } } = data
@@ -38,7 +36,7 @@ const Blog = ({ data }: Props) => {
                     </TitleMeta>
                 </TitleContainer>
                 <BodyContainer>
-                    <MDXProvider components={shortcodes}>
+                    <MDXProvider components={components}>
                         <MDXRenderer frontmatter={frontmatter}>{body}</MDXRenderer>
                     </MDXProvider>
                 </BodyContainer>

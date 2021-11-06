@@ -24,7 +24,11 @@ const HeaderBody = styled.div`
     a {
         font-size: 1.1rem;
         text-decoration: none;
-        color:rgb(69, 73, 99) !important;
+        color:rgb(69, 73, 99);
+
+        :hover {
+            color: #ed7842
+        }
     }
     margin: 0 auto;
     padding: 0 1rem;

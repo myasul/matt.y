@@ -10,6 +10,7 @@ type Edge = {
         frontmatter: {
             title: string
             published: string
+            slug: string
         }
     }
 }
@@ -25,15 +26,16 @@ const HomePage = ({ data }: { data: HomeQuery }) => {
 
     useEffect(() => {
         const { allMdx: { edges } } = data
-        const postHighlights = edges.map(edge => ({
-            title: edge.node.frontmatter.title,
-            published: edge.node.frontmatter.published
-        }))
+        const postHighlights = edges.map(edge => {
+            const { title, published, slug } = edge.node.frontmatter
+
+            return { title, published, slug }
+        })
 
         setHighlights(postHighlights)
     }, [data])
 
-    return <Home highlights={highlights}/>
+    return <Home highlights={highlights} />
 }
 
 export const homeQuery = graphql`
