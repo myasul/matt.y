@@ -1,40 +1,60 @@
 import React, { useEffect, useState } from 'react'
 import { graphql } from 'gatsby'
-import { FluidObject } from 'gatsby-image'
+import { getImage, IGatsbyImageData, ImageDataLike } from 'gatsby-plugin-image'
 
 import { AuthorInfo } from '../../components/pages/about/types'
 import About from '../../components/pages/about/About'
 import { Layout } from '../../components/Layout'
-import { AboutQuery } from './types'
+
+type Edge = {
+    node: {
+        body: string
+        frontmatter: {
+            featured: ImageDataLike
+        }
+    }
+}
+
+export type AboutQuery = {
+    allMdx: {
+        edges: Edge[]
+    }
+    site: {
+        siteMetadata: {
+            authorInfo: AuthorInfo
+        }
+    }
+}
 
 const AboutPage = ({ data }: { data: AboutQuery }) => {
     const [aboutBody, setAboutBody] = useState<string>()
     const [authorInfo, setAuthorInfo] = useState<AuthorInfo>()
-    const [authorImageFluid, setAuthorImageFluid] = useState<FluidObject>()
+    const [authorImage, setAuthorImage] = useState<IGatsbyImageData>()
 
     useEffect(() => {
         const { allMdx: { edges }, site: { siteMetadata: { authorInfo } } } = data
 
         if (!edges.length) throw new Error('About me content not found.')
 
-        const { body, frontmatter: { featured: { childImageSharp: { fluid } } } } = edges[0].node
+        const { body, frontmatter: { featured } } = edges[0].node
+        const image = getImage(featured)
 
         setAboutBody(body)
-        setAuthorImageFluid(fluid)
+        setAuthorImage(image)
         setAuthorInfo(authorInfo)
     }, [data])
 
     return (
-        (authorInfo && aboutBody && authorImageFluid)
-        ? (
-            <About
-                authorDescriptionBody={aboutBody}
-                authorInfo={authorInfo}
-                authorImageFluid={authorImageFluid}
-            />
-        )
-        // Add a basic loading component
-        : <Layout>Loading</Layout>
+        (authorInfo && aboutBody && authorImage)
+            ? (
+                <About
+                    authorDescriptionBody={aboutBody}
+                    authorInfo={authorInfo}
+                    authorImage={authorImage}
+                />
+            )
+            // Add a basic loading component
+            : <Layout>Loading</Layout>
     )
 }
 
@@ -55,9 +75,7 @@ export const aboutQuery = graphql`
                     frontmatter {
                         featured {
                             childImageSharp {   
-                                fluid(maxWidth: 1000) {
-                                    ...GatsbyImageSharpFluid
-                                }
+                                gatsbyImageData(width: 1000, layout: FULL_WIDTH)
                             }
                         }
                     }

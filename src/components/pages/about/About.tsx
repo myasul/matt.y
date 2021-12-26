@@ -1,5 +1,5 @@
 import React from 'react'
-import Img, { FluidObject } from 'gatsby-image'
+import  { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 import { Layout } from '../../Layout'
 import { AboutMeta } from './AboutMeta'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
@@ -15,10 +15,10 @@ import {
 type Props = {
     authorDescriptionBody: string
     authorInfo: AuthorInfo
-    authorImageFluid: FluidObject
+    authorImage: IGatsbyImageData
 }
 
-export const About = ({ authorDescriptionBody, authorInfo, authorImageFluid }: Props) => {
+export const About = ({ authorDescriptionBody, authorInfo, authorImage}: Props) => {
     return (
         <Layout>
             <AboutMeta name={authorInfo.name} description={authorInfo.description} />
@@ -28,7 +28,7 @@ export const About = ({ authorDescriptionBody, authorInfo, authorImageFluid }: P
                     <MDXRenderer>{authorDescriptionBody}</MDXRenderer>
                 </AboutDescription>
                 <AboutImageContainer>
-                    <Img alt={`${authorInfo.name}'s picture`} fluid={authorImageFluid} />
+                    <GatsbyImage alt={`${authorInfo.name}'s picture`} image={authorImage} />
                 </AboutImageContainer>
             </AboutContainer>
         </Layout>

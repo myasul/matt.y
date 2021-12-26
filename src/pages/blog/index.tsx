@@ -3,7 +3,24 @@ import React, { useEffect, useState } from 'react'
 
 import { Blog } from '../../components/pages/blog/Blog'
 import { BlogHighlights } from '../../components/types'
-import { BlogQuery } from './types'
+
+type Edge = {
+    node: {
+        body: string
+        frontmatter: {
+            title: string
+            published: string
+            slug: string
+        }
+    }
+}
+
+export type BlogQuery = {
+    allMdx: {
+        edges: Edge[]
+    }
+}
+
 
 const BlogPage = ({ data }: { data: BlogQuery }) => {
     const [highlights, setHighlights] = useState<BlogHighlights[]>([])

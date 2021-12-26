@@ -9,8 +9,16 @@ module.exports = {
     siteMetadata: require('./gatsby/config/site-metada'),
     plugins: [
         `gatsby-plugin-styled-components`,
-        `gatsby-plugin-sharp`,
+        `gatsby-plugin-image`,
         `gatsby-transformer-sharp`,
+        {
+            resolve: `gatsby-plugin-sharp`,
+            options: {
+                defaults: {
+                    quality: 100
+                }
+            }
+        },
         {
             resolve: `gatsby-source-filesystem`,
             options: {
