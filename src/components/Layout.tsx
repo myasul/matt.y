@@ -10,7 +10,7 @@ import { Footer } from './Footer'
 
 const GlobalStyle = createGlobalStyle`
     body {
-        font-family: 'Comfortaa', cursive;
+        font-family: 'Libre Baskerville', serif;
         margin: 0;
         padding: 0;
     }
@@ -85,7 +85,7 @@ export const Layout = ({ children }: Props) => {
     return (
         <div>
             <GlobalStyle />
-            <LayoutMeta title={siteInfo.title} description={siteInfo.description} />
+            <LayoutMeta title={authorInfo.name} description={siteInfo.description} />
             <LayoutBody>
                 <Header title={siteInfo.title} />
                 <LayoutChildrenContainer>

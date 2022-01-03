@@ -20,6 +20,7 @@ export const AboutDescription = styled.div`
 
 export const AboutImageContainer = styled.div`
     width: 37%;
+    border-radius: 5px;
 `
 
 export const AboutHeader = styled.h1`

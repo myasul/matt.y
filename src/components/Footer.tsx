@@ -10,6 +10,7 @@ type Props = {
 
 const FooterContainer = styled.footer`
     font-size: 1.1rem;
+    font-family: "Domine", serif;
     color: rgb(69, 73, 99);
     display: flex;
     justify-content: space-between;
@@ -19,7 +20,7 @@ const FooterContainer = styled.footer`
     margin: 0 auto;
     width: 100%;
     margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
 
     a {
         text-decoration: none;
@@ -30,7 +31,7 @@ const FooterContainer = styled.footer`
 const FooterIconContainer = styled.div`
     display: flex;
     justify-content: space-evenly;
-    min-width: 20%;
+    min-width: 30%;
 `
 
 const CopyrightContainer = styled.div`
@@ -47,16 +48,16 @@ export const Footer = ({ authorInfo }: Props) => {
             <CopyrightContainer>{name} &copy; {currentYear}</CopyrightContainer>
             <FooterIconContainer>
                 <a href={profiles.facebook} target="_blank">
-                    <Facebook size='28' />
+                    <Facebook size='23' />
                 </a>
                 <a href={profiles.instagram} target="_blank">
-                    <Instagram size='28' />
+                    <Instagram size='23' />
                 </a>
                 <a href={profiles.linkedin} target="_blank">
-                    <Linkedin size='28' />
+                    <Linkedin size='23' />
                 </a>
                 <a href={profiles.github} target="_blank">
-                    <GitHub size='28' />
+                    <GitHub size='23' />
                 </a>
             </FooterIconContainer>
         </FooterContainer>

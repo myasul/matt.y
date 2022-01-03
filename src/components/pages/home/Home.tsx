@@ -13,7 +13,7 @@ export const Home = ({ highlights }: { highlights: BlogHighlights[] }) => {
                 <Introduction>
                     <h1>Hey, I'm Matt!</h1>
                     <h3>
-                        I'm a software developer at <a href='https://okrasolar.com' target='_blank'>Okra Solar</a>.
+                        I'm a software developer at <a href='https://okrasolar.com' target="_blank">Okra Solar</a>.
                         This website is my first open-source project where I share my thoughts, learnings, and ideas! Feel free to roam around and read about my shenanigans.
                         I hope you'll learn a thing or two afterwards!
                     </h3>

@@ -11,9 +11,9 @@ export const Blog = ({ highlights }: { highlights: BlogHighlights[] }) => {
         <Layout>
             <BlogContainer>
                 <BlogHeader>
-                    <h1>Ang Aking Kwaderno</h1>
+                    <h1>Kwaderno</h1>
                     <h3>
-                        Kwaderno is notebook in Filipino. I loved to scribble and write about anything in my notebook when I was a kid.
+                        Kwaderno is <i>notebook</i> in Filipino. I loved to scribble and write about anything in my notebook when I was a kid.
                         Learning to program gave me the opportunity to create my own digital notebook. This is a place where I write and dump my thoughts, ideas, and learnings.
                         
                     </h3>

@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 
 export const Introduction = styled.section`
-    margin-top: 7rem;
-    width: 60%;
+    margin-top: 5rem;
+    width: 90%;
 
     h1 {
-        font-size: 3rem;
+        font-size: 4rem;
     }
 
     h3 {
@@ -15,13 +15,15 @@ export const Introduction = styled.section`
 `
 
 export const BlogSectionContainer = styled.section`
-    margin-top: 5rem;
+    margin-top: 1rem;
     
     a {
         color: black;
     }
 
     h2 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
         a:hover {
             color: #ed7842 !important;
         }
@@ -31,6 +33,7 @@ export const BlogSectionContainer = styled.section`
         width: 70%;
         color: rgb(69, 73, 99);
         line-height: 2rem;
+        margin-top: 0.5rem;
         margin-bottom: 3rem;
     }
 `

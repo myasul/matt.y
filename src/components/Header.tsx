@@ -13,16 +13,26 @@ const HeaderContainer = styled.header`
 
 const HeaderItems = styled.div`
     display: flex;
+    align-items: center;
     min-width: 25%;
     justify-content: space-between;
+    font-size: 0.9rem;
+
+    h2 {
+        padding: 0 0.5rem;
+    }
 `
 
 const HeaderBody = styled.div`
     max-width: 1200px;
     display: flex;
     justify-content: space-between;
+    font-family: "Domine", serif;
+    font-size: 1rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+
     a {
-        font-size: 1.1rem;
         text-decoration: none;
         color:rgb(69, 73, 99);
 
@@ -30,8 +40,6 @@ const HeaderBody = styled.div`
             color: #ed7842
         }
     }
-    margin: 0 auto;
-    padding: 0 1rem;
 `
 
 

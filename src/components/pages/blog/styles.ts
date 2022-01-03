@@ -29,7 +29,7 @@ export const HighlightListContainer = styled.section`
 export const HighlightCardContainer = styled.div`
     border: 1px solid rgba(52, 61, 68, 0.05);
     box-shadow: 0px 1px 2px rgba(52, 61, 68, 0.1);
-    max-width: 15vw;
+    max-width: 25vw;
     grid-column: 1/4;
     padding: 0 1.5rem;
     display: flex;
@@ -55,6 +55,7 @@ export const HighlightCardContainer = styled.div`
             background-color: #F98B3B;
         }
         cursor: pointer;
+        transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) 0s;
     }
 `
 
