@@ -7,6 +7,7 @@ import { SiteInfo, AuthorInfo } from '../types/siteMetadata'
 import { Header } from './Header'
 import { LayoutMeta } from './LayoutMeta'
 import { Footer } from './Footer'
+import { BreakPoint } from '../lib/utils/breakpoints'
 
 const GlobalStyle = createGlobalStyle`
     body {
@@ -42,14 +43,17 @@ type Props = {
 const LayoutBody = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: center;
     min-height: 100vh;
-    max-width: 1200px;
-    margin: 0 auto;
 `
 
-const LayoutChildrenContainer = styled.div`
+const LayoutChildrenContainer = styled.div<{breakpointSize: number}>`
+    width: 65%;
+    margin: 0 auto;
     flex: 1;
+
+    @media (max-width: ${props => props.breakpointSize}px) {
+        width: 100%;
+    }
 `
 
 export const Layout = ({ children }: Props) => {
@@ -88,7 +92,7 @@ export const Layout = ({ children }: Props) => {
             <LayoutMeta title={authorInfo.name} description={siteInfo.description} />
             <LayoutBody>
                 <Header title={siteInfo.title} />
-                <LayoutChildrenContainer>
+                <LayoutChildrenContainer breakpointSize={BreakPoint.MinimumLarge -1}>
                     {children}
                 </LayoutChildrenContainer>
                 <Footer authorInfo={authorInfo} />

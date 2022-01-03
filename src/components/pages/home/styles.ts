@@ -13,7 +13,6 @@ export const Introduction = styled.section<{breakpointSize: number}>`
         line-height: 2rem;
     }
 
-
     @media (max-width: ${props => props.breakpointSize}px) {
         width: 100%;
     }

@@ -40,13 +40,17 @@ export const AboutBody = styled.div<{breakpointSize: number}>`
     }
 `
 
-export const AboutContainer = styled.div`
+export const AboutContainer = styled.div<{breakpointSize: number}>`
     display: flex;
     flex-direction: column;
     height: 85%;
     padding-top: 3rem;
     justify-content: space-evenly;
     margin: auto 1.5rem;
+
+    @media (max-width: ${props => props.breakpointSize}px) {
+        padding-top: 1rem;
+    }
 `
 
 export const AboutDescription = styled.div`

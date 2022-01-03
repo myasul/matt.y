@@ -24,7 +24,7 @@ export const About = ({ authorDescriptionBody, authorInfo, authorImage }: Props)
     return (
         <Layout>
             <AboutMeta name={authorInfo.name} description={authorInfo.description} />
-            <AboutContainer>
+            <AboutContainer breakpointSize={BreakPoint.MinimumMedium - 1}>
                 <AboutIntro breakpointSize={BreakPoint.MinimumMedium - 1}>
                     <p style={{ fontSize: '0.8rem', fontWeight: 'bold' }}>ABOUT</p>
                     <h1>Matthew Yasul</h1>

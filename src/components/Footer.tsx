@@ -19,6 +19,7 @@ const FooterContainer = styled.footer`
     min-height: 5vh;
     /* padding: 0 1rem; */
     margin: 0 auto;
+    max-width: 1200px;
     width: 100%;
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;

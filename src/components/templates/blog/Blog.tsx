@@ -7,6 +7,7 @@ import { Layout } from '../../Layout'
 import { DateUtil } from '../../../lib/utils/DateUtil'
 import { BlogContainer, BodyContainer, Title, TitleContainer, TitleMeta } from './styles'
 import components from '../../mdx'
+import { BreakPoint } from '../../../lib/utils/breakpoints'
 
 
 type BlogQueryData = {
@@ -17,7 +18,7 @@ type BlogQueryData = {
         }
         body: string
     }
-} 
+}
 
 type Props = {
     data: BlogQueryData
@@ -28,18 +29,14 @@ const Blog = ({ data }: Props) => {
 
     return (
         <Layout>
-            <BlogContainer>
-                <TitleContainer>
-                    <Title>{frontmatter.title}</Title>
-                    <TitleMeta>
-                        <h6>Last Updated {DateUtil.toAbbrevDateTime(new Date(frontmatter.published))}</h6>
-                    </TitleMeta>
-                </TitleContainer>
-                <BodyContainer>
-                    <MDXProvider components={components}>
-                        <MDXRenderer frontmatter={frontmatter}>{body}</MDXRenderer>
-                    </MDXProvider>
-                </BodyContainer>
+            <BlogContainer breakpointSize={BreakPoint.MinimumMedium -1}>
+                <Title breakpointSize={BreakPoint.MinimumMedium -1}>{frontmatter.title}</Title>
+                <TitleMeta>
+                    <h6>Last Updated {DateUtil.toAbbrevDateTime(new Date(frontmatter.published))}</h6>
+                </TitleMeta>
+                <MDXProvider components={components}>
+                    <MDXRenderer frontmatter={frontmatter}>{body}</MDXRenderer>
+                </MDXProvider>
             </BlogContainer>
         </Layout>
     )

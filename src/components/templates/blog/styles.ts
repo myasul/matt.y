@@ -54,10 +54,14 @@ const PrismStyles = css`
 
 `
 
-export const Title = styled.h1`
+export const Title = styled.h1<{breakpointSize: number}>`
     font-size: 3.5rem;
     text-align: left;
     width: 100%;
+
+    @media (max-width: ${props => props.breakpointSize}px) {
+        font-size: 2.5rem;
+    }
 `
 
 export const TitleMeta = styled.div`
@@ -74,10 +78,18 @@ export const TitleContainer = styled.section`
     width: 100%;
 `
 
-export const BlogContainer = styled.article`
-    width: 80%;
+export const BlogContainer = styled.article<{breakpointSize: number}>`
     margin: 0 auto;
     margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr min(80ch, 100%) 1fr;
+    * {
+        grid-column: 2;
+    }
+
+    @media (max-width: ${props => props.breakpointSize}px) {
+        margin: 0 2rem;
+    }
 
     ${PrismStyles}
 `

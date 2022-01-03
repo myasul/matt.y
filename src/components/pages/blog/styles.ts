@@ -7,7 +7,7 @@ export const BlogContainer = styled.div`
     flex-direction: column;
 `
 
-export const BlogHeader = styled.section`
+export const BlogHeader = styled.section<{breakpointSize: number}>`
     h1 {
         font-size: 3rem;
     }
@@ -18,6 +18,12 @@ export const BlogHeader = styled.section`
     text-align: left;
     width: 70%;
     margin-bottom: 2rem;
+
+    @media (max-width: ${props => props.breakpointSize}px) {
+        width: 100%;
+
+        h1 { margin-top: 1rem; }
+    }
 `
 
 export const HighlightListContainer = styled.div<{breakpointSize: number}>`
