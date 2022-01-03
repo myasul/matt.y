@@ -20,13 +20,17 @@ export const BlogHeader = styled.section`
     margin-bottom: 2rem;
 `
 
-export const HighlightListContainer = styled.section`
+export const HighlightListContainer = styled.div<{breakpointSize: number}>`
     display: flex;
     flex-wrap: wrap;
     justify-content: start;
+
+    @media (max-width: ${props => props.breakpointSize}px) {
+        justify-content: space-evenly;
+    }
 `
 
-export const HighlightCardContainer = styled.div`
+export const HighlightCardContainer = styled.div<{breakpointSize: number}>`
     color: rgb(69, 73, 99);
     border: 1px solid rgba(52, 61, 68, 0.05);
     box-shadow: 0px 1px 2px rgba(52, 61, 68, 0.1);
@@ -57,6 +61,11 @@ export const HighlightCardContainer = styled.div`
         }
         cursor: pointer;
         transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) 0s;
+    }
+
+    @media (max-width: ${props => props.breakpointSize}px) {
+        width: 100%;
+        max-width: 100%;
     }
 `
 

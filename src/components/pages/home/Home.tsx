@@ -1,6 +1,7 @@
 import { Link } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
+import { BreakPoint } from '../../../lib/utils/breakpoints'
 import { Layout } from '../../Layout'
 import { BlogHighlights } from '../../types'
 import { HighlightList } from '../blog/HighlightList'
@@ -9,7 +10,7 @@ import { BlogSectionContainer, HomeContainer, Introduction } from './styles'
 export const Home = ({ highlights }: { highlights: BlogHighlights[] }) => {
     return (
         <Layout>
-            <HomeContainer>
+            <HomeContainer breakpointSize={BreakPoint.MinimumMedium -1}>
                 <Introduction>
                     <h1>Hey, I'm Matt!</h1>
                     <h3>

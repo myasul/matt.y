@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const Introduction = styled.section`
-    margin-top: 3rem;
     width: 90%;
 
     h1 {
@@ -31,7 +30,7 @@ export const BlogSectionContainer = styled.section`
     }
 
     h4 {
-        width: 70%;
+        width: 100%;
         color: rgb(69, 73, 99);
         line-height: 2rem;
         margin-top: 0.5rem;
@@ -39,9 +38,13 @@ export const BlogSectionContainer = styled.section`
     }
 `
 
-export const HomeContainer = styled.main`
-    margin: 0 auto;
+export const HomeContainer = styled.main<{breakpointSize: number}>`
+    margin: 5rem auto;
     padding: 0 1rem;
     display: flex;
     flex-direction: column;
+
+    @media (max-width: ${props => props.breakpointSize}px) {
+        margin-top: 0;
+    }
 `
