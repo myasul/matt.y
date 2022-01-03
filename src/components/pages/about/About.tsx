@@ -29,7 +29,7 @@ export const About = ({ authorDescriptionBody, authorInfo, authorImage }: Props)
                     <p style={{ fontSize: '0.8rem', fontWeight: 'bold' }}>ABOUT</p>
                     <h1>Matthew Yasul</h1>
                     <h2>
-                        Software developer, coffee geek, part-time freelancer, and full-time hustler. 
+                        Software developer, coffee enthusiast, part-time freelancer, and full-time hustler. 
                     </h2>
                 </AboutIntro>
                 <AboutBody breakpointSize={BreakPoint.MinimumMedium - 1}>
