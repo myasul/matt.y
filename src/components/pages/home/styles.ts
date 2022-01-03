@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
-export const Introduction = styled.section`
-    width: 90%;
+export const Introduction = styled.section<{breakpointSize: number}>`
+    width: 70%;
 
     h1 {
         font-size: 4rem;
@@ -11,6 +11,11 @@ export const Introduction = styled.section`
     h3 {
         color: rgb(69, 73, 99);
         line-height: 2rem;
+    }
+
+
+    @media (max-width: ${props => props.breakpointSize}px) {
+        width: 100%;
     }
 `
 

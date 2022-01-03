@@ -11,7 +11,7 @@ export const Home = ({ highlights }: { highlights: BlogHighlights[] }) => {
     return (
         <Layout>
             <HomeContainer breakpointSize={BreakPoint.MinimumMedium -1}>
-                <Introduction>
+                <Introduction  breakpointSize={BreakPoint.MinimumMedium -1}>
                     <h1>Hey, I'm Matt!</h1>
                     <h3>
                         I'm a software developer at <a href='https://okrasolar.com' target="_blank">Okra Solar</a>.
