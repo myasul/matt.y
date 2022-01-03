@@ -4,12 +4,11 @@ export const Introduction = styled.section<{breakpointSize: number}>`
     width: 70%;
 
     h1 {
+        color: black;
         font-size: 4rem;
     }
 
-    /* TODO: Make the text color below available globally */
     h3 {
-        color: rgb(69, 73, 99);
         line-height: 2rem;
     }
 
@@ -35,7 +34,6 @@ export const BlogSectionContainer = styled.section`
 
     h4 {
         width: 100%;
-        color: rgb(69, 73, 99);
         line-height: 2rem;
         margin-top: 0.5rem;
         margin-bottom: 3rem;

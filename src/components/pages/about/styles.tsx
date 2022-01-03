@@ -58,7 +58,6 @@ export const AboutDescription = styled.div`
     font-size: 1.2rem;
     line-height: 2.5rem;
     text-align: left;
-    color: rgb(69, 73, 99);
     p { margin-top: 0;}
 `
 

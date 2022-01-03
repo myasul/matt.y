@@ -14,6 +14,7 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Libre Baskerville', serif;
         margin: 0;
         padding: 0;
+        color: rgb(69, 73, 99);
     }
 
     a {

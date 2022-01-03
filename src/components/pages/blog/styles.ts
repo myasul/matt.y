@@ -9,6 +9,7 @@ export const BlogContainer = styled.div`
 
 export const BlogHeader = styled.section<{breakpointSize: number}>`
     h1 {
+        color: black;
         font-size: 3rem;
     }
     h3 {
@@ -37,7 +38,6 @@ export const HighlightListContainer = styled.div<{breakpointSize: number}>`
 `
 
 export const HighlightCardContainer = styled.div<{breakpointSize: number}>`
-    color: rgb(69, 73, 99);
     border: 1px solid rgba(52, 61, 68, 0.05);
     box-shadow: 0px 1px 2px rgba(52, 61, 68, 0.1);
     max-width: 25vw;
