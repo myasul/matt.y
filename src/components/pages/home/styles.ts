@@ -1,13 +1,14 @@
 import styled from 'styled-components'
 
 export const Introduction = styled.section`
-    margin-top: 5rem;
+    margin-top: 3rem;
     width: 90%;
 
     h1 {
         font-size: 4rem;
     }
 
+    /* TODO: Make the text color below available globally */
     h3 {
         color: rgb(69, 73, 99);
         line-height: 2rem;

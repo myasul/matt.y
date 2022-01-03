@@ -49,6 +49,7 @@ export const homeQuery = graphql`
                     frontmatter {
                         title
                         published
+                        slug
                     }
                 }
             }

@@ -1,29 +1,65 @@
 import styled from 'styled-components'
 
-export const AboutContainer = styled.div`
+export const AboutIntro = styled.div<{breakpointSize: number}>`
     display: flex;
-    height: 85%;
-    padding-top: 3rem;
-    justify-content: space-evenly;
-`
+    flex-direction: column;
+    margin-bottom: 2rem;
+    width: 85%;
 
-export const AboutDescription = styled.div`
-    width: 50%;
-    font-size: 1.2rem;
-    line-height: 2rem;
-    text-align: left;
-    color: rgb(69, 73, 99);
-    p {
-        margin-top: 0;
+    h1 {
+        color: black;
+        text-align: left;
+        font-size: 4rem;
+        margin: auto 0;
+    }
+
+    h2 {
+        font-weight: 100;
+        font-size: 2rem;
+    }
+
+
+    @media (max-width: ${props => props.breakpointSize}px) {
+        h1 {
+            font-size: 3rem;
+        }
+
+        h2 {
+            font-size: 1.7rem;
+            font-weight: lighter;
+        }
     }
 `
 
-export const AboutImageContainer = styled.div`
-    width: 37%;
-    border-radius: 5px;
+export const AboutBody = styled.div<{breakpointSize: number}>`
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    @media (max-width: ${props => props.breakpointSize}px) {
+        grid-template-columns: 1fr;
+    }
 `
 
-export const AboutHeader = styled.h1`
-    color: black;
+export const AboutContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    height: 85%;
+    padding-top: 3rem;
+    justify-content: space-evenly;
+    margin: auto 1.5rem;
+`
+
+export const AboutDescription = styled.div`
+    width: 100%;
+    font-size: 1.2rem;
+    line-height: 2.5rem;
     text-align: left;
+    color: rgb(69, 73, 99);
+    p { margin-top: 0;}
+`
+
+export const AboutImageContainer = styled.div`
+    width: 80%;
+    border-radius: 5px;
+    margin: 0 auto;
 `

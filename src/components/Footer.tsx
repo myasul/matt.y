@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { Instagram, Facebook, GitHub, Linkedin } from 'react-feather'
 import styled from 'styled-components'
+import { BreakPoint } from '../lib/utils/breakpoints'
 
 import { AuthorInfo } from '../types/siteMetadata'
 
@@ -28,10 +29,14 @@ const FooterContainer = styled.footer`
     }
 `
 
-const FooterIconContainer = styled.div`
+const FooterIconContainer = styled.div<{breakpointSize: number}>`
     display: flex;
     justify-content: space-evenly;
     min-width: 30%;
+
+    @media (max-width: ${props => props.breakpointSize}px) {
+        min-width: 45%;
+    }
 `
 
 const CopyrightContainer = styled.div`
@@ -46,7 +51,7 @@ export const Footer = ({ authorInfo }: Props) => {
     return (
         <FooterContainer>
             <CopyrightContainer>{name} &copy; {currentYear}</CopyrightContainer>
-            <FooterIconContainer>
+            <FooterIconContainer breakpointSize={BreakPoint.MinimumMedium -1}>
                 <a href={profiles.facebook} target="_blank">
                     <Facebook size='23' />
                 </a>

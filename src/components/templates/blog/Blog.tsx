@@ -4,7 +4,7 @@ import { MDXProvider } from '@mdx-js/react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import { Layout } from '../../Layout'
-import { DateUtil } from '../../../utils/DateUtil'
+import { DateUtil } from '../../../lib/utils/DateUtil'
 import { BlogContainer, BodyContainer, Title, TitleContainer, TitleMeta } from './styles'
 import components from '../../mdx'
 
