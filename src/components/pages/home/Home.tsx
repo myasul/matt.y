@@ -1,6 +1,5 @@
 import { Link } from 'gatsby'
 import React from 'react'
-import styled from 'styled-components'
 import { BreakPoint } from '../../../lib/utils/breakpoints'
 import { Layout } from '../../Layout'
 import { BlogHighlights } from '../../types'
