@@ -6,7 +6,7 @@ const PrismStyles = css`
      * and overflow that we removed from <pre>.
      */
     .gatsby-highlight {
-      padding: 1em;
+      /* padding: 1em; */
     }
 
     /**
@@ -16,11 +16,8 @@ const PrismStyles = css`
      * 2. Always fill the visible space in .gatsby-highlight.
      * 3. Adjust the position of the line numbers
      */
-    .gatsby-highlight pre[class*="lan pguage-"] {
+    .gatsby-highlight pre[class*="language-"] {
       border-radius: 10px;
-      overflow: initial;
-      float: left; /* 1 */
-      min-width: 100%; /* 2 */
     }
 
     .gatsby-highlight-code-line {
@@ -54,14 +51,15 @@ const PrismStyles = css`
 
 `
 
-export const Title = styled.h1<{breakpointSize: number}>`
+export const Title = styled.h1<{ breakpointSize: number }>`
     font-size: 3.5rem;
     text-align: left;
     width: 100%;
     color: black;
 
     @media (max-width: ${props => props.breakpointSize}px) {
-        font-size: 2.5rem;
+        width: 80%;
+        font-size: 2.3rem;
     }
 `
 
@@ -70,17 +68,9 @@ export const TitleMeta = styled.div`
     width: 100%;
 `
 
-export const TitleContainer = styled.section`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+export const BlogContainer = styled.article<{ breakpointSize: number }>`
     margin: 0 auto;
-    width: 100%;
-`
-
-export const BlogContainer = styled.article<{breakpointSize: number}>`
-    margin: 0 auto;
+    padding: 0 1rem;
     margin-top: 3rem;
     display: grid;
     grid-template-columns: 1fr min(80ch, 100%) 1fr;
@@ -90,13 +80,8 @@ export const BlogContainer = styled.article<{breakpointSize: number}>`
 
     @media (max-width: ${props => props.breakpointSize}px) {
         margin: 0 2rem;
+        padding: 0;
     }
 
     ${PrismStyles}
-`
-
-export const BodyContainer = styled.section`
-    width: 85%;
-    margin: 0 auto;
-    margin-top: 6rem;
 `

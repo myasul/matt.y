@@ -5,7 +5,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import { Layout } from '../../Layout'
 import { DateUtil } from '../../../lib/utils/DateUtil'
-import { BlogContainer, BodyContainer, Title, TitleContainer, TitleMeta } from './styles'
+import { BlogContainer, Title, TitleMeta } from './styles'
 import components from '../../mdx'
 import { BreakPoint } from '../../../lib/utils/breakpoints'
 

@@ -41,7 +41,7 @@ export const BlogSectionContainer = styled.section`
 `
 
 export const HomeContainer = styled.main<{breakpointSize: number}>`
-    margin: 5rem auto;
+    margin: 1.5rem auto;
     padding: 0 1rem;
     display: flex;
     flex-direction: column;
