@@ -1,8 +1,10 @@
-1/**
+/**
  * Configure your Gatsby site with this file.
  *
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
+
+require('dotenv').config({ path: '.env' })
 
 module.exports = {
     /* Your site config here */
@@ -50,5 +52,16 @@ module.exports = {
                 ],
             }
         },
+        {
+            resolve: `gatsby-plugin-google-gtag`,
+            options: {
+                trackingIds: [
+                    process.env.GA_TRACKING_ID
+                ],
+                pluginConfig: {
+                    head: true
+                }
+            }
+        }
     ]
 }
