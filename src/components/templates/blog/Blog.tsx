@@ -8,7 +8,7 @@ import { DateUtil } from '../../../lib/utils/DateUtil'
 import { BlogContainer, Title, TitleMeta } from './styles'
 import components from '../../mdx'
 import { BreakPoint } from '../../../lib/utils/breakpoints'
-import { Comments } from '../../Comments'
+import { Comments } from '../../comments/Comments'
 
 type BlogQueryData = {
     mdx: {
