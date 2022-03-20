@@ -26,6 +26,7 @@ const createUtterancesScriptTag = () => {
     scriptElement.setAttribute('issue-term', 'pathname')
     scriptElement.setAttribute('label', 'comments')
     scriptElement.setAttribute('theme', 'github-light')
+    scriptElement.setAttribute('id', 'utterances')
 
     return scriptElement
 }
