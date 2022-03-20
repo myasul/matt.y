@@ -8,6 +8,7 @@ import { DateUtil } from '../../../lib/utils/DateUtil'
 import { BlogContainer, Title, TitleMeta } from './styles'
 import components from '../../mdx'
 import { BreakPoint } from '../../../lib/utils/breakpoints'
+import { Comments } from '../../Comments'
 
 type BlogQueryData = {
     mdx: {
@@ -36,6 +37,7 @@ const Blog = ({ data }: Props) => {
                 <MDXProvider components={components}>
                     <MDXRenderer frontmatter={frontmatter}>{body}</MDXRenderer>
                 </MDXProvider>
+                <Comments />
             </BlogContainer>
         </Layout>
     )
