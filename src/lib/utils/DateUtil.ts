@@ -5,8 +5,8 @@ export class DateUtil {
 
         const match = dateString.match(dateTimeRegex)
 
-        if (!match?.length) throw new Error(`Invalid date: ${dateString}`)
+        if (!(match !== null && match.length > 0)) throw new Error(`Invalid date: ${dateString}`)
 
-        return match[0].replace(/(?<=\d)\s(?=\d)/g,', ')
+        return match[0].replace(/(?<=\d)\s(?=\d)/g, ', ')
     }
 }

@@ -6,11 +6,14 @@ import { DateUtil } from '../../../lib/utils/DateUtil'
 import { BlogHighlights } from '../../types'
 import { HighlightCardContainer, Metadata, Title } from './styles'
 
-
 export const HighlightCard = ({ highlight }: { highlight: BlogHighlights }) => {
+    const handleClick = () => {
+        void navigate(`/blog/${highlight.slug}`)
+    }
+
     return (
         <HighlightCardContainer
-            onClick={() => navigate(`/blog/${highlight.slug}`)}
+            onClick={handleClick}
             breakpointSize={BreakPoint.MinimumMedium - 1}
         >
             <Title>{highlight.title}</Title>

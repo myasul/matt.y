@@ -42,7 +42,6 @@ const HeaderBody = styled.div`
     }
 `
 
-
 export const Header = ({ title }: Props) => {
     return (
         <HeaderContainer>

@@ -1,5 +1,4 @@
-import styled, { css } from 'styled-components'
-
+import styled from 'styled-components'
 
 export const Title = styled.h1`
     text-align: left;
@@ -31,4 +30,3 @@ export const H4 = styled.h4`
     margin: auto 0;
     margin-top: 3rem;
 `
-

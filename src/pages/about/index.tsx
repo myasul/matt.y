@@ -6,7 +6,7 @@ import { AuthorInfo } from '../../components/pages/about/types'
 import About from '../../components/pages/about/About'
 import { Layout } from '../../components/Layout'
 
-type Edge = {
+interface Edge {
     node: {
         body: string
         frontmatter: {
@@ -15,7 +15,7 @@ type Edge = {
     }
 }
 
-export type AboutQuery = {
+export interface AboutQuery {
     allMdx: {
         edges: Edge[]
     }
@@ -34,7 +34,7 @@ const AboutPage = ({ data }: { data: AboutQuery }) => {
     useEffect(() => {
         const { allMdx: { edges }, site: { siteMetadata: { authorInfo } } } = data
 
-        if (!edges.length) throw new Error('About me content not found.')
+        if (edges.length === 0) throw new Error('About me content not found.')
 
         const { body, frontmatter: { featured } } = edges[0].node
         const image = getImage(featured)
@@ -45,7 +45,11 @@ const AboutPage = ({ data }: { data: AboutQuery }) => {
     }, [data])
 
     return (
-        (authorInfo && aboutBody && authorImage)
+        (
+            authorInfo !== undefined &&
+            aboutBody !== undefined &&
+            authorImage !== undefined
+        )
             ? (
                 <About
                     authorDescriptionBody={aboutBody}

@@ -47,7 +47,7 @@ const LayoutBody = styled.div`
     min-height: 100vh;
 `
 
-const LayoutChildrenContainer = styled.div<{breakpointSize: number}>`
+const LayoutChildrenContainer = styled.div<{ breakpointSize: number }>`
     width: 65%;
     margin: 0 auto;
     flex: 1;
@@ -93,7 +93,7 @@ export const Layout = ({ children }: Props) => {
             <LayoutMeta title={authorInfo.name} description={siteInfo.description} />
             <LayoutBody>
                 <Header title={siteInfo.title} />
-                <LayoutChildrenContainer breakpointSize={BreakPoint.MinimumLarge -1}>
+                <LayoutChildrenContainer breakpointSize={BreakPoint.MinimumLarge - 1}>
                     {children}
                 </LayoutChildrenContainer>
                 <Footer authorInfo={authorInfo} />

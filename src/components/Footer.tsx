@@ -30,7 +30,7 @@ const FooterContainer = styled.footer`
     }
 `
 
-const FooterIconContainer = styled.div<{breakpointSize: number}>`
+const FooterIconContainer = styled.div<{ breakpointSize: number }>`
     display: flex;
     justify-content: space-evenly;
     min-width: 30%;
@@ -52,17 +52,17 @@ export const Footer = ({ authorInfo }: Props) => {
     return (
         <FooterContainer>
             <CopyrightContainer>{name} &copy; {currentYear}</CopyrightContainer>
-            <FooterIconContainer breakpointSize={BreakPoint.MinimumMedium -1}>
-                <a href={profiles.facebook} target="_blank">
+            <FooterIconContainer breakpointSize={BreakPoint.MinimumMedium - 1}>
+                <a href={profiles.facebook} target="_blank" rel='noreferrer'>
                     <Facebook size='23' />
                 </a>
-                <a href={profiles.instagram} target="_blank">
+                <a href={profiles.instagram} target="_blank" rel='noreferrer'>
                     <Instagram size='23' />
                 </a>
-                <a href={profiles.linkedin} target="_blank">
+                <a href={profiles.linkedin} target="_blank" rel='noreferrer'>
                     <Linkedin size='23' />
                 </a>
-                <a href={profiles.github} target="_blank">
+                <a href={profiles.github} target="_blank" rel='noreferrer'>
                     <GitHub size='23' />
                 </a>
             </FooterIconContainer>

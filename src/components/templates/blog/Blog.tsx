@@ -9,7 +9,6 @@ import { BlogContainer, Title, TitleMeta } from './styles'
 import components from '../../mdx'
 import { BreakPoint } from '../../../lib/utils/breakpoints'
 
-
 type BlogQueryData = {
     mdx: {
         frontmatter: {
@@ -29,8 +28,8 @@ const Blog = ({ data }: Props) => {
 
     return (
         <Layout>
-            <BlogContainer breakpointSize={BreakPoint.MinimumMedium -1}>
-                <Title breakpointSize={BreakPoint.MinimumMedium -1}>{frontmatter.title}</Title>
+            <BlogContainer breakpointSize={BreakPoint.MinimumMedium - 1}>
+                <Title breakpointSize={BreakPoint.MinimumMedium - 1}>{frontmatter.title}</Title>
                 <TitleMeta>
                     <h6>Last Updated {DateUtil.toAbbrevDateTime(new Date(frontmatter.published))}</h6>
                 </TitleMeta>

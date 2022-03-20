@@ -6,7 +6,6 @@ import { BlogContainer, BlogHeader } from './styles'
 import { BlogHighlights } from '../../types'
 import { BreakPoint } from '../../../lib/utils/breakpoints'
 
-
 export const Blog = ({ highlights }: { highlights: BlogHighlights[] }) => {
     return (
         <Layout>

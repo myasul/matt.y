@@ -9,13 +9,13 @@ import { BlogSectionContainer, HomeContainer, Introduction } from './styles'
 export const Home = ({ highlights }: { highlights: BlogHighlights[] }) => {
     return (
         <Layout>
-            <HomeContainer breakpointSize={BreakPoint.MinimumMedium -1}>
-                <Introduction  breakpointSize={BreakPoint.MinimumMedium -1}>
-                    <h1>Hey, I'm Matt!</h1>
+            <HomeContainer breakpointSize={BreakPoint.MinimumMedium - 1}>
+                <Introduction breakpointSize={BreakPoint.MinimumMedium - 1}>
+                    <h1>Hey, I&apos;m Matt!</h1>
                     <h3>
-                        I'm a software developer at <a href='https://okrasolar.com' target="_blank">Okra Solar</a>.
+                        I&apos;m a software developer at <a href='https://okrasolar.com' target="_blank" rel='noreferrer'>Okra Solar</a>.
                         This website is my first open-source project where I share my thoughts, learnings, and ideas! Feel free to roam around and read about my shenanigans.
-                        I hope you'll learn a thing or two afterwards!
+                        I hope you&apos;ll learn a thing or two afterwards!
                     </h3>
                 </Introduction>
                 <BlogSectionContainer>

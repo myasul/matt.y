@@ -1,53 +1,65 @@
 {
-  "name": "gatsby-starter-hello-world",
-  "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
-  "version": "0.1.0",
-  "license": "0BSD",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "gatsby develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-  },
-  "dependencies": {
-    "@mdx-js/mdx": "^1.6.22",
-    "@mdx-js/react": "^1.6.22",
-    "babel-plugin-styled-components": "^1.13.2",
-    "dotenv": "^16.0.0",
-    "gatsby": "^4.0.0-zz-next.1",
-    "gatsby-plugin-google-gtag": "^4.10.0",
-    "gatsby-plugin-image": "^2.1.0",
-    "gatsby-plugin-mdx": "^3.0.0",
-    "gatsby-plugin-sharp": "^4.1.0",
-    "gatsby-plugin-styled-components": "^4.14.0",
-    "gatsby-remark-images": "^5.11.0",
-    "gatsby-remark-prismjs": "^6.0.0",
-    "gatsby-remark-shiki-twoslash": "^3.0.30",
-    "gatsby-remark-smartypants": "^5.0.0",
-    "gatsby-source-filesystem": "^3.14.0",
-    "gatsby-transformer-sharp": "^4.1.0",
-    "prismjs": "^1.25.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-feather": "^2.0.9",
-    "styled-components": "^5.3.1"
-  },
-  "devDependencies": {
-    "@types/mdx-js__react": "^1.5.5",
-    "@types/react-helmet": "^6.1.4",
-    "@types/styled-components": "^5.1.15",
-    "prettier": "2.3.2",
-    "react-helmet": "^6.1.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  }
+    "name": "gatsby-starter-hello-world",
+    "private": true,
+    "description": "A simplified bare-bones starter for Gatsby",
+    "version": "0.1.0",
+    "license": "0BSD",
+    "scripts": {
+        "build": "gatsby build",
+        "develop": "gatsby develop",
+        "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+        "start": "gatsby develop",
+        "serve": "gatsby serve",
+        "clean": "gatsby clean",
+        "lint": "eslint --quiet -c .eslintrc.js --ext .ts,.tsx,.js,.jsx .",
+        "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    },
+    "dependencies": {
+        "@mdx-js/mdx": "^1.6.22",
+        "@mdx-js/react": "^1.6.22",
+        "babel-plugin-styled-components": "^1.13.2",
+        "dotenv": "^16.0.0",
+        "gatsby": "^4.0.0-zz-next.1",
+        "gatsby-plugin-google-gtag": "^4.10.0",
+        "gatsby-plugin-image": "^2.1.0",
+        "gatsby-plugin-mdx": "^3.0.0",
+        "gatsby-plugin-sharp": "^4.1.0",
+        "gatsby-plugin-styled-components": "^4.14.0",
+        "gatsby-remark-images": "^5.11.0",
+        "gatsby-remark-prismjs": "^6.0.0",
+        "gatsby-remark-shiki-twoslash": "^3.0.30",
+        "gatsby-remark-smartypants": "^5.0.0",
+        "gatsby-source-filesystem": "^3.14.0",
+        "gatsby-transformer-sharp": "^4.1.0",
+        "prismjs": "^1.25.0",
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1",
+        "react-feather": "^2.0.9",
+        "styled-components": "^5.3.1"
+    },
+    "devDependencies": {
+        "@types/mdx-js__react": "^1.5.5",
+        "@types/react-helmet": "^6.1.4",
+        "@types/styled-components": "^5.1.15",
+        "@typescript-eslint/eslint-plugin": "^5.15.0",
+        "@typescript-eslint/parser": "^5.15.0",
+        "eslint": "^8.11.0",
+        "eslint-config-standard-with-typescript": "^21.0.1",
+        "eslint-plugin-import": "^2.25.4",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-promise": "^6.0.0",
+        "eslint-plugin-react": "^7.29.4",
+        "eslint-webpack-plugin": "^3.1.1",
+        "gatsby-plugin-eslint": "^4.0.2",
+        "prettier": "2.3.2",
+        "react-helmet": "^6.1.0",
+        "typescript": "^4.6.2"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+    },
+    "bugs": {
+        "url": "https://github.com/gatsbyjs/gatsby/issues"
+    }
 }

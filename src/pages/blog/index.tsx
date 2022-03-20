@@ -21,7 +21,6 @@ export type BlogQuery = {
     }
 }
 
-
 const BlogPage = ({ data }: { data: BlogQuery }) => {
     const [highlights, setHighlights] = useState<BlogHighlights[]>([])
 

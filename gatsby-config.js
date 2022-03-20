@@ -26,7 +26,7 @@ module.exports = {
             options: {
                 path: `${__dirname}/content`,
                 name: `content`
-            },
+            }
         },
         {
             resolve: `gatsby-plugin-mdx`,
@@ -39,17 +39,17 @@ module.exports = {
                         options: {
                             maxWidth: 590,
                             linkImagesToOriginal: true,
-                            quality: 100,
-                        },
+                            quality: 100
+                        }
                     },
                     {
                         resolve: `gatsby-remark-prismjs`,
                         options: {
                             showLineNumbers: true,
                             noInlineHighlight: false
-                        },
-                    },
-                ],
+                        }
+                    }
+                ]
             }
         },
         {
