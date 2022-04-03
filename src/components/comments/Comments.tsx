@@ -18,18 +18,18 @@ const Delimiter = styled.div`
 `
 
 const createUtterancesScriptTag = () => {
-    const scriptElement = document.createElement('script')
+    const script = document.createElement('script')
 
-    scriptElement.async = true
-    scriptElement.src = 'https://utteranc.es/client.js'
-    scriptElement.setAttribute('repo', WEBSITE_REPO)
-    scriptElement.setAttribute('issue-term', 'pathname')
-    scriptElement.setAttribute('label', 'comments')
-    scriptElement.setAttribute('theme', 'github-light')
-    scriptElement.setAttribute('id', 'utterances')
-    scriptElement.setAttribute('crossorigin', 'anonymous')
+    script.async = true
+    script.src = 'https://utteranc.es/client.js'
+    script.setAttribute('repo', WEBSITE_REPO)
+    script.setAttribute('issue-term', 'pathname')
+    script.setAttribute('label', 'comments')
+    script.setAttribute('theme', 'github-light')
+    script.setAttribute('id', 'utterances')
+    script.setAttribute('crossorigin', 'anonymous')
 
-    return scriptElement
+    return script
 }
 
 export const Comments = () => {
