@@ -9,6 +9,7 @@ require('dotenv').config({ path: '.env' })
 module.exports = {
     /* Your site config here */
     siteMetadata: require('./gatsby/config/site-metada'),
+    trailingSlash: "never",
     plugins: [
         `gatsby-plugin-styled-components`,
         `gatsby-plugin-image`,

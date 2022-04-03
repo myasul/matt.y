@@ -6,8 +6,9 @@ import { CommentSkeleton } from './CommentSkeleton'
 
 const WEBSITE_REPO = 'myasul/matt.y'
 
-const CommentThreadContainer = styled.div`
+const CommentThreadContainer = styled.div<{ isVisible: boolean }>`
     margin-top: 2rem;
+    display: ${props => props.isVisible ? 'block' : 'hidden'}
 `
 
 const Delimiter = styled.div`
@@ -21,12 +22,12 @@ const createUtterancesScriptTag = () => {
 
     scriptElement.async = true
     scriptElement.src = 'https://utteranc.es/client.js'
-    scriptElement.crossOrigin = 'anonymous'
     scriptElement.setAttribute('repo', WEBSITE_REPO)
     scriptElement.setAttribute('issue-term', 'pathname')
     scriptElement.setAttribute('label', 'comments')
     scriptElement.setAttribute('theme', 'github-light')
     scriptElement.setAttribute('id', 'utterances')
+    scriptElement.setAttribute('crossorigin', 'anonymous')
 
     return scriptElement
 }
@@ -36,19 +37,28 @@ export const Comments = () => {
     const commentBox = useRef<HTMLDivElement>(null)
 
     useEffect(() => {
+        const handleScriptLoad = () => {
+            const iframe = document.querySelector<HTMLIFrameElement>('.utterances-frame')
+
+            if (!iframe) return
+
+            iframe.onload = () => {
+                // Add delay to make sure comments are already rendered
+                setTimeout(() => setIsLoaded(true), 500)
+            }
+        }
+
+        const scriptElement = createUtterancesScriptTag()
+
         if (commentBox?.current) {
-            const scriptElement = createUtterancesScriptTag()
-
-            scriptElement.addEventListener('load', () => {
-                const iframe = document.querySelector<HTMLIFrameElement>('.utterances-frame')
-
-                if (iframe) iframe.onload = () => setTimeout(() => setIsLoaded(true), 1000)
-            })
+            scriptElement.addEventListener('load', handleScriptLoad)
 
             commentBox.current.appendChild(scriptElement)
         } else {
             console.error('Failed to add utterances comments.')
         }
+
+        return () => scriptElement.removeEventListener('load', handleScriptLoad)
     }, [])
 
     return (
@@ -56,7 +66,7 @@ export const Comments = () => {
             <Delimiter />
             <H3>Comments</H3>
             {!isLoaded && <CommentSkeleton />}
-            <CommentThreadContainer ref={commentBox} />
+            <CommentThreadContainer ref={commentBox} isVisible={isLoaded} />
         </section>
     )
 }
