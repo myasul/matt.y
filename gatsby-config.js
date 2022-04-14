@@ -4,6 +4,8 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
+const { siteUrl } = require('./gatsby/config/site-metada')
+
 require('dotenv').config({ path: '.env' })
 
 module.exports = {
@@ -16,11 +18,7 @@ module.exports = {
         `gatsby-transformer-sharp`,
         {
             resolve: `gatsby-plugin-sharp`,
-            options: {
-                defaults: {
-                    quality: 100
-                }
-            }
+            options: { defaults: { quality: 100 } }
         },
         {
             resolve: `gatsby-source-filesystem`,
@@ -56,12 +54,25 @@ module.exports = {
         {
             resolve: `gatsby-plugin-google-gtag`,
             options: {
-                trackingIds: [
-                    process.env.GA_TRACKING_ID
-                ],
-                pluginConfig: {
-                    head: true
-                }
+                trackingIds: [process.env.GA_TRACKING_ID],
+                pluginConfig: { head: true }
+            }
+        },
+        {
+            resolve: `gatsby-plugin-sitemap`,
+            options: {
+                query: `
+                    {
+                        pages: allSitePage {
+                            nodes {
+                                path
+                            }
+                        }
+                    }
+               `,
+                resolveSiteUrl: () => siteUrl,
+                resolvePages: ({ pages: { nodes: allPages } }) => allPages,
+                serialize: ({ path }) => ({ url: path })
             }
         }
     ]
