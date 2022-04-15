@@ -28,8 +28,8 @@ export interface SiteInfo {
 export interface SiteMetadataQuery {
     site: {
         siteMetadata: {
-            authorInfo: AuthorInfo,
+            authorInfo: AuthorInfo
             siteInfo: SiteInfo
         }
-    } 
+    }
 }

@@ -7,7 +7,7 @@ import { Post } from '../../../types/post'
 import { HighlightCardContainer, Metadata, Title } from './styles'
 
 export const HighlightCard = ({ highlight }: { highlight: Post }) => {
-    const handleClick = () => navigate(`/blog/${highlight.slug}`)
+    const handleClick = async () => { await navigate(`/blog/${highlight.slug}`) }
 
     return (
         <HighlightCardContainer

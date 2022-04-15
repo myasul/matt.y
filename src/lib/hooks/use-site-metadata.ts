@@ -25,4 +25,3 @@ export const useSiteMetadata = () => {
 
     return { author, site }
 }
-
