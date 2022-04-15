@@ -35,8 +35,8 @@ export const MetaTags = ({ post }: { post: Post }) => {
             <meta property="og:image" content={imageUrl} />
             <meta property="og:image:secure_url" content={imageUrl} />
             <meta property="og:image:type" content="image/jpeg" />
-            <meta property="og:image:width" content="540" />
-            <meta property="og:image:height" content="540" />
+            <meta property="og:image:width" content="640" />
+            <meta property="og:image:height" content="360" />
             <meta property="og:image:alt" content="A shiny red apple with a bite taken out" />
 
 
