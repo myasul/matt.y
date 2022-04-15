@@ -28,10 +28,17 @@ export const MetaTags = ({ post }: { post: Post }) => {
             <meta property="og:description" content={post.description} />
             <meta property="og:url" content={postUrl} />
             <meta name="image" property="og:image" content={imageUrl} />
-            <meta name="author" content={author.name} />
+            <meta name="author" property="article:author" content={author.name} />
             <meta property="article:published_time" content={post.published} />
             {/* TODO: Tags should be added here */}
             <meta property="article:tag" content="" key="" />
+            <meta property="og:image" content={imageUrl} />
+            <meta property="og:image:secure_url" content={imageUrl} />
+            <meta property="og:image:type" content="image/jpeg" />
+            <meta property="og:image:width" content="540" />
+            <meta property="og:image:height" content="540" />
+            <meta property="og:image:alt" content="A shiny red apple with a bite taken out" />
+
 
             {/* Meta properties to transform links in
             the website as cards in twitter */}
