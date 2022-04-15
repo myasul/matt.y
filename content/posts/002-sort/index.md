@@ -3,7 +3,7 @@ title: 'Sort effectively: Understanding Array.prototype.sort()'
 description: A blog post where I dig deep on how to use the built-in sort method in JavaScript.
 published: 2022-03-19
 slug: sort-effectively
-thumbnail: "./images/thumbnail.png"
+thumbnail: "./images/thumbnail.jpg"
 type: post
 ---
 
