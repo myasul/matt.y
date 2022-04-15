@@ -3,10 +3,10 @@ import React from 'react'
 import { Layout } from '../../Layout'
 import { HighlightList } from './HighlightList'
 import { BlogContainer, BlogHeader } from './styles'
-import { BlogHighlights } from '../../types'
 import { BreakPoint } from '../../../lib/utils/breakpoints'
+import { PostPlain } from '../../../types/post'
 
-export const Blog = ({ highlights }: { highlights: BlogHighlights[] }) => {
+export const Blog = ({ highlights }: { highlights: PostPlain[] }) => {
     return (
         <Layout>
             <BlogContainer>

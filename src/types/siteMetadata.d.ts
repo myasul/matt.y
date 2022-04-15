@@ -11,6 +11,9 @@ export interface AuthorInfo {
     email: string
     jobTitle: string
     profiles: Profiles
+    usernames: {
+        twitter: string
+    }
 }
 
 export interface SiteInfo {
@@ -20,4 +23,13 @@ export interface SiteInfo {
     metaDescription: string
     url: string
     repositoryUrl: string
+}
+
+export interface SiteMetadataQuery {
+    site: {
+        siteMetadata: {
+            authorInfo: AuthorInfo,
+            siteInfo: SiteInfo
+        }
+    } 
 }

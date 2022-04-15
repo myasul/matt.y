@@ -2,16 +2,12 @@ import { graphql } from 'gatsby'
 import React, { useEffect, useState } from 'react'
 
 import { Blog } from '../../components/pages/blog/Blog'
-import { BlogHighlights } from '../../components/types'
+import { PostPlain } from '../../types/post'
 
 type Edge = {
     node: {
         body: string
-        frontmatter: {
-            title: string
-            published: string
-            slug: string
-        }
+        frontmatter: PostPlain
     }
 }
 
@@ -22,15 +18,11 @@ export type BlogQuery = {
 }
 
 const BlogPage = ({ data }: { data: BlogQuery }) => {
-    const [highlights, setHighlights] = useState<BlogHighlights[]>([])
+    const [highlights, setHighlights] = useState<PostPlain[]>([])
 
     useEffect(() => {
         const { allMdx: { edges } } = data
-        const postHighlights = edges.map(edge => {
-            const { node: { frontmatter: { title, published, slug } } } = edge
-
-            return { title, published, slug }
-        })
+        const postHighlights = edges.map(edge => edge.node.frontmatter)
 
         setHighlights(postHighlights)
     }, [data])
@@ -47,9 +39,8 @@ export const blogQuery = graphql`
             edges {
                 node {
                     frontmatter {
-                        title
-                        published
-                        slug
+                        # See fragments/index.ts
+                        ...Post
                     }
                 }
             }

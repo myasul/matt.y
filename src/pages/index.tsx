@@ -1,16 +1,12 @@
 import { graphql } from 'gatsby'
 import React, { useEffect, useState } from 'react'
 import { Home } from '../components/pages/home/Home'
-import { BlogHighlights } from '../components/types'
+import { Post } from '../types/post'
 
 type Edge = {
     node: {
         body: string
-        frontmatter: {
-            title: string
-            published: string
-            slug: string
-        }
+        frontmatter: Post
     }
 }
 
@@ -21,15 +17,11 @@ export type HomeQuery = {
 }
 
 const HomePage = ({ data }: { data: HomeQuery }) => {
-    const [highlights, setHighlights] = useState<BlogHighlights[]>([])
+    const [highlights, setHighlights] = useState<Post[]>([])
 
     useEffect(() => {
         const { allMdx: { edges } } = data
-        const postHighlights = edges.map(edge => {
-            const { title, published, slug } = edge.node.frontmatter
-
-            return { title, published, slug }
-        })
+        const postHighlights = edges.map(edge => edge.node.frontmatter)
 
         setHighlights(postHighlights)
     }, [data])
@@ -46,9 +38,8 @@ export const homeQuery = graphql`
             edges {
                 node {
                     frontmatter {
-                        title
-                        published
-                        slug
+                        # See fragments/index.ts
+                        ...Post
                     }
                 }
             }

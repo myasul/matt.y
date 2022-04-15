@@ -3,6 +3,7 @@ title: How I used Regex in TypeScript
 description: A blog post where I explained some of the scenarios where I used regular expressions to help me solve a problem.
 published: 2021-11-01
 slug: how-i-used-regex-in-typescript
+thumbnail: "./images/thumbnail.png"
 type: post
 ---
 
