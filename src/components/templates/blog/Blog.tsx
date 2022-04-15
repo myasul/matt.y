@@ -9,12 +9,17 @@ import { BlogContainer, Title, TitleMeta } from './styles'
 import components from '../../mdx'
 import { BreakPoint } from '../../../lib/utils/breakpoints'
 import { Comments } from '../../comments/Comments'
-import { Post } from '../../../types/post'
+import { Post, PostPlain } from '../../../types/post'
 import { MetaTags } from './MetaTags'
+import { IGatsbyImageData } from 'gatsby-plugin-image'
 
 type BlogQueryData = {
     mdx: {
-        frontmatter: Post
+        frontmatter: PostPlain & {
+            thumbnail: {
+                childImageSharp: { gatsbyImageData: IGatsbyImageData }
+            }
+        }
         body: string
     }
 }
@@ -24,11 +29,15 @@ type Props = {
 }
 
 const Blog = ({ data }: Props) => {
-    const { mdx: { frontmatter: post, body } } = data
+    const { mdx: { frontmatter, body } } = data
+    const post = {
+        ...frontmatter,
+        thumbnail: frontmatter.thumbnail.childImageSharp.gatsbyImageData
+    }
 
     return (
         <Layout>
-            <MetaTags post={post}/>
+            <MetaTags post={post} />
             <BlogContainer breakpointSize={BreakPoint.MinimumMedium - 1}>
                 <Title breakpointSize={BreakPoint.MinimumMedium - 1}>{post.title}</Title>
                 <TitleMeta>
@@ -47,11 +56,11 @@ export const blogQuery = graphql`
     query BlogBySlug($slug: String!) {
         mdx (frontmatter: { slug: { eq: $slug } }) {
             frontmatter {
-                # See fragments/index.ts
+                # See fragments/index.ts!
                 ...Post
                 thumbnail {
                     childImageSharp {
-                        gatsbyImageData(aspectRatio: 1.8, quality: 90, width: 708)
+                        gatsbyImageData(quality: 100)
                     }
                 }
             }

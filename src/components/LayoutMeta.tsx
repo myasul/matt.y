@@ -8,8 +8,6 @@ type Props = {
 
 export const LayoutMeta = ({ title, description }: Props) => (
     <Helmet>
-        <title>{title}</title>
-        <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <meta name='robots' content='index, follow'/>
         <html lang="en" />
