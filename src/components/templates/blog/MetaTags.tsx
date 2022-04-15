@@ -11,8 +11,8 @@ const toPost = compile('/:slug([a-zA-Z0-9-]+)/')
 export const MetaTags = ({ post }: { post: Post }) => {
     const { author, site } = useSiteMetadata()
 
-    const postUrl = `${site.url}/${toPost({ slug: post.slug })}`
-    const imageUrl = getSrc(post.thumbnail)
+    const postUrl = `${site.url}${toPost({ slug: post.slug })}`
+    const imageUrl = `${site.url}${getSrc(post.thumbnail)}`
 
     return (
         <Helmet>
