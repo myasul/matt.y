@@ -3,7 +3,7 @@ const SITE_URL = 'https://mattyasul.com'
 module.exports = {
     siteUrl: SITE_URL,
     siteInfo: {
-        title: 'MY',
+        title: '<mattyasul/>',
         metaTitle: `Matt Yasul's Blog`,
         metaDescription: 'This blog is place for me to share my ideas and learnings about React, TypeScript, Node and other programming stuff.',
         url: SITE_URL,

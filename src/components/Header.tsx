@@ -27,7 +27,7 @@ const HeaderBody = styled.div`
     max-width: 1200px;
     display: flex;
     justify-content: space-between;
-    font-family: "Domine", serif;
+    font-family: "DM Mono", serif;
     font-size: 1rem;
     margin: 0 auto;
     padding: 0 1rem;

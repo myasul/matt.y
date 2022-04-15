@@ -11,7 +11,7 @@ type Props = {
 
 const FooterContainer = styled.footer`
     font-size: 1.1rem;
-    font-family: "Domine", serif;
+    font-family: "DM Mono", serif;
     color: rgb(69, 73, 99);
     display: flex;
     justify-content: space-between;
