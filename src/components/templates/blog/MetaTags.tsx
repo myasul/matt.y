@@ -41,7 +41,7 @@ export const MetaTags = ({ post }: { post: Post }) => {
     const imageUrl = `${site.url}${getSrc(post.thumbnail) ?? ''}`
 
     return (
-        <Helmet>
+        <Helmet titleTemplate="%s">
             <title>{post.title}</title>
             <meta name="description" content={post.description} />
             <link rel="canonical" href={postUrl} />
@@ -55,6 +55,7 @@ export const MetaTags = ({ post }: { post: Post }) => {
             <meta property="og:url" content={postUrl} />
             <meta name="author" property="article:author" content={author.profiles.facebook} />
             <meta property="article:published_time" content={post.published} />
+            <meta property="fb:page_id" content="3164064200532295"/>
         </Helmet>
     )
 }
