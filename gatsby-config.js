@@ -11,7 +11,7 @@ require('dotenv').config({ path: '.env' })
 module.exports = {
     /* Your site config here */
     siteMetadata: require('./gatsby/config/site-metada'),
-    trailingSlash: "never",
+    trailingSlash: "always",
     plugins: [
         `gatsby-plugin-styled-components`,
         `gatsby-plugin-image`,
