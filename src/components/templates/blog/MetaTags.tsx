@@ -24,7 +24,7 @@ export const MetaTags = ({ post }: { post: Post }) => {
             the website as cards in FB and Messenger */}
             <meta property="og:site_name" content={site.metaTitle} />
             <meta property="og:type" content="article" />
-            <meta property="og:title" content={`${post.title} | ${author.name}`} />
+            <meta property="og:title" content={post.title} />
             <meta property="og:description" content={post.description} />
             <meta property="og:url" content={postUrl} />
             <meta name="author" property="article:author" content={author.profiles.facebook} />
