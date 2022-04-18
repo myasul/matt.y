@@ -2,16 +2,18 @@ import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { ReactNode } from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
-import { SiteInfo, AuthorInfo } from '../types/siteMetadata'
+import "@fontsource/dm-mono"
+import "@fontsource/fira-mono"
 
 import { Header } from './Header'
 import { LayoutMeta } from './LayoutMeta'
 import { Footer } from './Footer'
+import { SiteInfo, AuthorInfo } from '../types/siteMetadata'
 import { BreakPoint } from '../lib/utils/breakpoints'
 
 const GlobalStyle = createGlobalStyle`
     body {
-        font-family: 'Libre Baskerville', serif;
+        font-family: 'Fira Mono', monospace;
         margin: 0;
         padding: 0;
         color: rgb(69, 73, 99);

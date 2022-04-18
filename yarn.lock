@@ -1300,6 +1300,16 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fontsource/dm-mono@^4.5.7":
+  version "4.5.7"
+  resolved "https://registry.yarnpkg.com/@fontsource/dm-mono/-/dm-mono-4.5.7.tgz#3e439eeb03663e644f15b8ce5f812210d40a4a04"
+  integrity sha512-D36HRWg08Hpqh97/jur6Wa3ogvKwBDEUK2qk9wTK1CQNBO0u7+IVJz/2OwRzIckzp7nTYTpVbGs0Ky7NPLMQDQ==
+
+"@fontsource/fira-mono@^4.5.7":
+  version "4.5.7"
+  resolved "https://registry.yarnpkg.com/@fontsource/fira-mono/-/fira-mono-4.5.7.tgz#6daaece154ca81d000762e19beb723fbb9e1328a"
+  integrity sha512-oQhYhIDXQwbLSK07arXWGv8H6+GGKlHHy/hfgHnv+DgkyD5i3z8l08tiYp5Bu0IVOYgX2s3lhs4H56yOBAxEYQ==
+
 "@gatsbyjs/parcel-namer-relative-to-cwd@0.0.2":
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/@gatsbyjs/parcel-namer-relative-to-cwd/-/parcel-namer-relative-to-cwd-0.0.2.tgz#e1586f1796aa773e53e0909025ea16e423c14391"
