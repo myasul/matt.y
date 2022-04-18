@@ -34,7 +34,7 @@ export const MetaTags = ({ post }: { post: Post }) => {
             {/* <meta property="article:tag" content="" key="" /> */}
             <meta property="og:image" content={imageUrl} />
             <meta property="og:image:secure_url" content={imageUrl} />
-            <meta property="og:image:type" content="image/jpeg" />
+            <meta property="og:image:type" content="image/png" />
             <meta property="og:image:width" content="640" />
             <meta property="og:image:height" content="360" />
             <meta property="og:image:alt" content="Post cover" />
