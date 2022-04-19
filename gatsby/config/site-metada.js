@@ -4,7 +4,7 @@ module.exports = {
     siteUrl: SITE_URL,
     siteInfo: {
         title: '<mattyasul/>',
-        metaTitle: `Matt Yasul's Blog`,
+        metaTitle: `Matthew Yasul's Blog`,
         metaDescription: 'This blog is place for me to share my ideas and learnings about React, TypeScript, Node and other programming stuff.',
         url: SITE_URL,
         repositoryUrl: 'https://github.com/myasul/matt.y'
