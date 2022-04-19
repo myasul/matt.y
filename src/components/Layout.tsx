@@ -2,8 +2,8 @@ import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { ReactNode } from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
-import "@fontsource/dm-mono"
-import "@fontsource/fira-mono"
+import '@fontsource/dm-mono'
+import '@fontsource/fira-mono'
 
 import { Header } from './Header'
 import { LayoutMeta } from './LayoutMeta'

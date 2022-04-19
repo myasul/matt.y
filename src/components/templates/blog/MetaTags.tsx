@@ -39,7 +39,6 @@ export const MetaTags = ({ post }: { post: Post }) => {
             <meta property="og:image:height" content="360" />
             <meta property="og:image:alt" content="Post cover" />
 
-
             {/* Meta properties to transform links in
             the website as cards in twitter */}
             <meta property="twitter:card" content="summary_large_image" />

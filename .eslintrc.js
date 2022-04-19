@@ -11,7 +11,6 @@ module.exports = {
             version: 'detect'
         }
     },
-    ignorePatterns: ['**.txt'],
     parserOptions: {
         ecmaFeatures: {
             jsx: true

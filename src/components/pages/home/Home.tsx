@@ -1,5 +1,6 @@
-import { Link } from 'gatsby'
 import React from 'react'
+import { Link } from 'gatsby'
+
 import { BreakPoint } from '../../../lib/utils/breakpoints'
 import { Post } from '../../../types/post'
 import { Layout } from '../../Layout'

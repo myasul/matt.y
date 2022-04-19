@@ -9,7 +9,7 @@ import { BlogContainer, Title, TitleMeta } from './styles'
 import components from '../../mdx'
 import { BreakPoint } from '../../../lib/utils/breakpoints'
 import { Comments } from '../../comments/Comments'
-import { Post, PostPlain } from '../../../types/post'
+import { PostPlain } from '../../../types/post'
 import { MetaTags } from './MetaTags'
 import { IGatsbyImageData } from 'gatsby-plugin-image'
 
