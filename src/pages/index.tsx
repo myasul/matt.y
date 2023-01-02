@@ -1,36 +1,66 @@
 import { graphql } from 'gatsby'
+import { getImage, IGatsbyImageData, ImageDataLike } from 'gatsby-plugin-image'
 import React, { useEffect, useState } from 'react'
 import { Home } from '../components/pages/home/Home'
 import { Post } from '../types/post'
+import { AuthorInfo } from '../types/siteMetadata'
 
 type Edge = {
     node: {
-        body: string
         frontmatter: Post
     }
 }
 
 export type HomeQuery = {
+    site: {
+        siteMetadata: {
+            authorInfo: AuthorInfo
+        }
+    }
     allMdx: {
         edges: Edge[]
+    }
+    mdx: {
+        frontmatter: {
+            featured: ImageDataLike
+        }
+        body: string
     }
 }
 
 const HomePage = ({ data }: { data: HomeQuery }) => {
-    const [highlights, setHighlights] = useState<Post[]>([])
+    const [authorImage, setAuthorImage] = useState<IGatsbyImageData>()
 
     useEffect(() => {
-        const { allMdx: { edges } } = data
-        const postHighlights = edges.map(edge => edge.node.frontmatter)
+        const { mdx: { frontmatter: { featured } } } = data
+        const image = getImage(featured)
 
-        setHighlights(postHighlights)
+        setAuthorImage(image)
     }, [data])
 
-    return <Home highlights={highlights} />
+    if (!authorImage) return null
+
+    return (
+        <Home
+            authorImage={authorImage}
+            description={data.mdx.body}
+            highlights={data.allMdx.edges.map(edge => edge.node.frontmatter)}
+            authorInfo={data.site.siteMetadata.authorInfo}
+        />
+    )
 }
 
 export const homeQuery = graphql`
     query Home {
+        site {
+            siteMetadata {
+                authorInfo {
+                    nickname
+                    description
+                }
+            }
+        }
+
         allMdx(
             sort: {fields: frontmatter___published, order: DESC}
             filter: {frontmatter: {type: {eq: "post"}}}
@@ -43,6 +73,17 @@ export const homeQuery = graphql`
                     }
                 }
             }
+        }
+
+        mdx(frontmatter: {type: {eq: "home"}}) {
+            frontmatter {
+                featured {
+                    childImageSharp {   
+                        gatsbyImageData(width: 350, layout: FIXED)
+                    }
+                }
+            }
+            body
         }
     }
 `

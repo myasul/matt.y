@@ -4,11 +4,21 @@ import styled from 'styled-components'
 
 type Props = {
     title: string
+    height: number
+    bodyWidth: number
 }
 
-const HeaderContainer = styled.header`
+const HeaderContainer = styled.header<{height: number}>`
     width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     box-shadow: 0 5px 22px -20px #000;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    background-color: white;
+    height: ${props => props.height}px
 `
 
 const HeaderItems = styled.div`
@@ -23,14 +33,12 @@ const HeaderItems = styled.div`
     }
 `
 
-const HeaderBody = styled.div`
-    max-width: 1200px;
+const HeaderBody = styled.div<{width: number}>`
+    min-width: ${props => props.width}px;
     display: flex;
     justify-content: space-between;
     font-family: "DM Mono", serif;
     font-size: 1rem;
-    margin: 0 auto;
-    padding: 0 1rem;
 
     a {
         text-decoration: none;
@@ -42,10 +50,10 @@ const HeaderBody = styled.div`
     }
 `
 
-export const Header = ({ title }: Props) => {
+export const Header = ({ title, height, bodyWidth }: Props) => {
     return (
-        <HeaderContainer>
-            <HeaderBody>
+        <HeaderContainer height={height}>
+            <HeaderBody width={bodyWidth}>
                 <h2><Link to='/'>{title}</Link></h2>
                 <HeaderItems>
                     <h2><Link to='/blog'>Blog</Link></h2>

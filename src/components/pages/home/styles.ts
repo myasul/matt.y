@@ -1,7 +1,9 @@
 import styled from 'styled-components'
 
 export const Introduction = styled.section<{breakpointSize: number}>`
-    width: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 
     h1 {
         color: black;
@@ -19,6 +21,9 @@ export const Introduction = styled.section<{breakpointSize: number}>`
 
 export const BlogSectionContainer = styled.section`
     margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
     
     a {
         color: black;
@@ -41,12 +46,16 @@ export const BlogSectionContainer = styled.section`
 `
 
 export const HomeContainer = styled.main<{breakpointSize: number}>`
-    margin: 1.5rem auto;
-    padding: 0 1rem;
     display: flex;
     flex-direction: column;
 
     @media (max-width: ${props => props.breakpointSize}px) {
         margin-top: 0;
     }
+`
+
+export const AuthorImageContainer = styled.div`
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 `

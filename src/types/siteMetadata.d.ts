@@ -7,6 +7,7 @@ interface Profiles {
 
 export interface AuthorInfo {
     name: string
+    nickname: string
     description: string
     email: string
     jobTitle: string

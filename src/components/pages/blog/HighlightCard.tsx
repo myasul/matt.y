@@ -2,11 +2,11 @@ import { navigate } from 'gatsby'
 import React from 'react'
 import { BreakPoint } from '../../../lib/utils/breakpoints'
 import { DateUtil } from '../../../lib/utils/DateUtil'
-import { Post } from '../../../types/post'
+import { PostPlain } from '../../../types/post'
 
 import { HighlightCardContainer, Metadata, Title } from './styles'
 
-export const HighlightCard = ({ highlight }: { highlight: Post }) => {
+export const HighlightCard = ({ highlight }: { highlight: PostPlain }) => {
     const handleClick = () => { void navigate(`/blog/${highlight.slug}`) }
 
     return (

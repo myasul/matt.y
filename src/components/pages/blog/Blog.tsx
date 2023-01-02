@@ -11,12 +11,7 @@ export const Blog = ({ highlights }: { highlights: PostPlain[] }) => {
         <Layout>
             <BlogContainer>
                 <BlogHeader breakpointSize={BreakPoint.MinimumMedium - 1}>
-                    <h1>Kwaderno</h1>
-                    <h3>
-                        Kwaderno is <i>notebook</i> in Filipino. I loved to scribble and write about anything in my notebook when I was a kid.
-                        Learning to program gave me the opportunity to create my own digital notebook. This is a place where I write and dump my thoughts, ideas, and learnings.
-
-                    </h3>
+                    <h1>Latest Posts</h1>
                 </BlogHeader>
                 <HighlightList highlights={highlights} />
             </BlogContainer>

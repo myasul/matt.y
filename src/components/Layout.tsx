@@ -9,7 +9,6 @@ import { Header } from './Header'
 import { LayoutMeta } from './LayoutMeta'
 import { Footer } from './Footer'
 import { SiteInfo, AuthorInfo } from '../types/siteMetadata'
-import { BreakPoint } from '../lib/utils/breakpoints'
 
 const GlobalStyle = createGlobalStyle`
     body {
@@ -43,20 +42,28 @@ type Props = {
     children: ReactNode
 }
 
+const HEADER_HEIGHT = 65
+const SITE_MAX_WIDTH = 900
+
 const LayoutBody = styled.div`
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    justify-content: center;
+    align-items: center;
 `
 
-const LayoutChildrenContainer = styled.div<{ breakpointSize: number }>`
-    width: 65%;
-    margin: 0 auto;
+const LayoutChildrenContainer = styled.div<{
+    maxWidth: number
+    marginTop: number
+}>`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: ${props => props.maxWidth}px;
+    margin-top: ${props => props.marginTop}px;
     flex: 1;
-
-    @media (max-width: ${props => props.breakpointSize}px) {
-        width: 100%;
-    }
+    width: 100%;
 `
 
 export const Layout = ({ children }: Props) => {
@@ -94,11 +101,18 @@ export const Layout = ({ children }: Props) => {
             <GlobalStyle />
             <LayoutMeta title={authorInfo.name} description={siteInfo.description} />
             <LayoutBody>
-                <Header title={siteInfo.title} />
-                <LayoutChildrenContainer breakpointSize={BreakPoint.MinimumLarge - 1}>
+                <Header
+                    title={siteInfo.title}
+                    height={HEADER_HEIGHT}
+                    bodyWidth={SITE_MAX_WIDTH}
+                />
+                <LayoutChildrenContainer
+                    maxWidth={SITE_MAX_WIDTH}
+                    marginTop={30}
+                >
                     {children}
                 </LayoutChildrenContainer>
-                <Footer authorInfo={authorInfo} />
+                <Footer authorInfo={authorInfo} maxWidth={SITE_MAX_WIDTH} />
             </LayoutBody>
         </div>
     )

@@ -79,7 +79,7 @@ export const aboutQuery = graphql`
                     frontmatter {
                         featured {
                             childImageSharp {   
-                                gatsbyImageData(width: 1000, layout: FULL_WIDTH)
+                                gatsbyImageData(width: 400, layout: FULL_WIDTH)
                             }
                         }
                     }

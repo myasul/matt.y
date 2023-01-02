@@ -7,9 +7,10 @@ import { AuthorInfo } from '../types/siteMetadata'
 
 type Props = {
     authorInfo: AuthorInfo
+    maxWidth: number
 }
 
-const FooterContainer = styled.footer`
+const FooterContainer = styled.footer<{maxWidth: number}>`
     font-size: 1.1rem;
     font-family: "DM Mono", serif;
     color: rgb(69, 73, 99);
@@ -19,7 +20,7 @@ const FooterContainer = styled.footer`
     min-height: 5vh;
     /* padding: 0 1rem; */
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: ${props => props.maxWidth}px;
     width: 100%;
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
@@ -45,12 +46,12 @@ const CopyrightContainer = styled.div`
     margin-left: 1rem;
 `
 
-export const Footer = ({ authorInfo }: Props) => {
+export const Footer = ({ authorInfo, maxWidth }: Props) => {
     const { name, profiles } = authorInfo
     const currentYear = new Date().getFullYear()
 
     return (
-        <FooterContainer>
+        <FooterContainer maxWidth={maxWidth}>
             <CopyrightContainer>{name} &copy; {currentYear}</CopyrightContainer>
             <FooterIconContainer breakpointSize={BreakPoint.MinimumMedium - 1}>
                 <a href={profiles.facebook} target="_blank" rel='noreferrer'>

@@ -3,9 +3,9 @@ import React from 'react'
 import { HighlightListContainer } from './styles'
 import { HighlightCard } from './HighlightCard'
 import { BreakPoint } from '../../../lib/utils/breakpoints'
-import { Post } from '../../../types/post'
+import { PostPlain } from '../../../types/post'
 
-export const HighlightList = ({ highlights }: { highlights: Post[] }) => (
+export const HighlightList = ({ highlights }: { highlights: PostPlain[] }) => (
     <HighlightListContainer breakpointSize={BreakPoint.MinimumMedium - 1}>
         {
             highlights.map(highlight => (
