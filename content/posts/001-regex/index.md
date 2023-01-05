@@ -1,6 +1,6 @@
 ---
 title: How I used Regex in TypeScript
-description: Etiam sed fringilla nisl. Nulla felis augue, blandit at placerat ac, consequat in orci. Proin vulputate urna ac metus molestie tempor. Nulla facilisi. Vivamus nec placerat nunc. Nulla nunc dolor, semper condimentum turpis elementum, posuere mattis elit. Cras dui mauris, viverra sed vulputate vel, pretium quis libero.
+description: Ditch searching regular expressions in StackOverflow and build your own! In this article, I've shared some of the instances at work where I found building my own regular expressions proved to be super helpful. 
 description-two: A blog post where I explained some of the scenarios where I used regular expressions to help me solve a problem.
 published: 2021-11-01
 slug: how-i-used-regex-in-typescript

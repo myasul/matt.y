@@ -9,4 +9,4 @@ I currently work at [Okra Solar](https://www.okrasolar.com). We hustle really ha
 
 When I'm not writing code, I probably am brewing coffee, working out, or spending time with loved ones.
 
-Please always feel free to say hi! I'm always happy to talk about technology, coffee, food, and anything in between!
+Please always feel free to say hi! You can reach me by email at [yasulmatthew@gmail.com](yasulmatthew@gmail.com). I'm always happy to talk about technology, coffee, anime, and anything in between!

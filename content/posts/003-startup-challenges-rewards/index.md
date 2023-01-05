@@ -1,6 +1,6 @@
 ---
 title: The Challenges and Rewards of working in a Startup Company
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vestibulum sem ut urna tristique pellentesque. Cras iaculis, ante at posuere accumsan, nisl tortor ultricies diam, ac congue tellus lacus eget ex. Morbi efficitur dapibus risus, sit amet rhoncus mauris. Quisque suscipit tellus at dolor blandit suscipit. 
+description: When I say startups, you might think about bean bag chairs, pingpong tables, free gym membership, and free food. It's really cool and all but that's only the tip of the iceberg.
 published: 2023-01-02
 slug: startup-challenges-rewards
 thumbnail: "./images/thumbnail.png"
@@ -11,7 +11,7 @@ type: post
 
 I've been working for a startup company (Okra Solar) for over four years now. It's quite different from all the big companies that I worked before. If I knew there are such thing as startups earlier in my career, I would have chose to work there instead. But I'm getting ahead of myself.
 
-When I say startups, you might think about bean bag chairs, pingpong tables, free gym membership, and free food (we never had a bean bag chair but we had a [weird wooden chair](https://shopee.ph/Original-Ergonomic-Kneeling-Chair-Stool-Home-Office-Furniture-Ergonomic-Rocking-Wooden-Kneeling-Comp-i.415451519.4385432563) that would make you sit straight). It's really cool and all but that's only the tip of the iceberg 
+When I say startups, you might think about bean bag chairs, pingpong tables, free gym membership, and free food (we never had a bean bag chair but we had a [weird wooden chair](https://shopee.ph/Original-Ergonomic-Kneeling-Chair-Stool-Home-Office-Furniture-Ergonomic-Rocking-Wooden-Kneeling-Comp-i.415451519.4385432563) that would make you sit straight). It's really cool and all but that's only the tip of the iceberg.
 
 Aside from the perks and freebies, there's a lot cool, crazy, chaotic, daunting, and fun things you might get to experience working for a startup. And I just written an article to share the challenges that I faced and rewards that I reaped while working for a cool startup like Okra. Are you ready? Let's start it up!
 
