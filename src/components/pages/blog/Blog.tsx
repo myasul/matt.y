@@ -13,7 +13,7 @@ export const Blog = ({ highlights }: { highlights: PostPlain[] }) => {
                 <BlogHeader breakpointSize={BreakPoint.MinimumMedium - 1}>
                     <h1>Posts</h1>
                 </BlogHeader>
-                <HighlightList highlights={highlights} />
+                <HighlightList highlights={highlights} postsPerCol={2}/>
             </BlogContainer>
         </Layout>
     )

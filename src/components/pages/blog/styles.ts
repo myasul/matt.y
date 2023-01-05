@@ -22,9 +22,9 @@ export const BlogHeader = styled.section<{ breakpointSize: number }>`
         color: rgb(69, 73, 99);
         line-height: 2rem;
     }
+
     text-align: left;
     width: 70%;
-    margin-bottom: 2rem;
 
     @media (max-width: ${props => props.breakpointSize}px) {
         width: 100%;
@@ -33,14 +33,15 @@ export const BlogHeader = styled.section<{ breakpointSize: number }>`
     }
 `
 
-export const HighlightListContainer = styled.div<{ breakpointSize: number }>`
+export const HighlightListContainer = styled.div<{ breakpointSize: number, postsPerCol: number }>`
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: ${props => Array(props.postsPerCol).fill('1fr').join(' ')};
     grid-template-rows: auto;
     gap: 1.5rem;
 
     @media (max-width: ${props => props.breakpointSize}px) {
         justify-content: space-evenly;
+        grid-template-columns: 1fr;
     }
 `
 

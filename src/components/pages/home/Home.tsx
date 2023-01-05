@@ -35,9 +35,11 @@ export const Home = ({ highlights, description, authorImage, authorInfo }: Props
                 </Introduction>
                 <BlogSectionContainer>
                     <h2>
-                        <Link to='/blog'>Latest Posts</Link>
+                        <Link to='/blog'>
+                            Latest Posts
+                        </Link>
                     </h2>
-                    <HighlightList highlights={highlights} />
+                    <HighlightList postsPerCol={1} highlights={highlights.slice(0, 3)} />
                 </BlogSectionContainer>
             </HomeContainer>
         </Layout>
