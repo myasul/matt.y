@@ -1,6 +1,7 @@
 ---
 title: How I used Regex in TypeScript
-description: A blog post where I explained some of the scenarios where I used regular expressions to help me solve a problem.
+description: Etiam sed fringilla nisl. Nulla felis augue, blandit at placerat ac, consequat in orci. Proin vulputate urna ac metus molestie tempor. Nulla facilisi. Vivamus nec placerat nunc. Nulla nunc dolor, semper condimentum turpis elementum, posuere mattis elit. Cras dui mauris, viverra sed vulputate vel, pretium quis libero.
+description-two: A blog post where I explained some of the scenarios where I used regular expressions to help me solve a problem.
 published: 2021-11-01
 slug: how-i-used-regex-in-typescript
 thumbnail: "./images/thumbnail.png"

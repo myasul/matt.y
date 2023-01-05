@@ -1,6 +1,6 @@
 ---
 title: The Challenges and Rewards of working in a Startup Company
-description: An article to share the challenges that I faced and rewards that I reaped while working for a cool startup like Okra.
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vestibulum sem ut urna tristique pellentesque. Cras iaculis, ante at posuere accumsan, nisl tortor ultricies diam, ac congue tellus lacus eget ex. Morbi efficitur dapibus risus, sit amet rhoncus mauris. Quisque suscipit tellus at dolor blandit suscipit. 
 published: 2023-01-02
 slug: startup-challenges-rewards
 thumbnail: "./images/thumbnail.png"
@@ -88,6 +88,8 @@ The time of each individual in a startup is precious. That's why team leaders en
 Sometimes it doesn't need to be a significant change for it to be impactful. Last year we made a minor improvement to the app so that you can easily search for a household (if you need to take payments or make repairs). Before, you must go to that house and scan the household's QR code. A few hours passed, and our support team received thank you messages from our users because it made their job much easier. We didn't expect that, but everyone from the company recognized the impact of that change and celebrated with us. Everyone gives credit, where credit is due.
 
 ## 🤓 Conclusion
+
+![Okra team](images/okra-team.jpg)
 
 I know that the startup life is not for everyone. There a lot of things to consider. Do you thrive well in the face of pressure? Are you a person who takes initiative? Are you ready to be accountable when things go wrong rather than doing the blame game? Are you willing to forego partying and weekend trips if the need arise?
 

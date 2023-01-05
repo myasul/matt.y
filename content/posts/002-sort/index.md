@@ -1,6 +1,7 @@
 ---
 title: 'Sort effectively: Understanding Array.prototype.sort()'
-description: A blog post where I dig deep on how to use the built-in sort method in JavaScript.
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut eros sodales mi euismod fermentum. Donec eu faucibus metus. Vestibulum sit amet dignissim neque. Fusce libero sem, vulputate quis nisl a, tincidunt faucibus sem. Nam facilisis ut turpis sed elementum.
+description-two: A blog post where I dig deep on how to use the built-in sort method in JavaScript.
 published: 2022-03-19
 slug: sort-effectively
 thumbnail: "./images/thumbnail.png"

@@ -1,10 +1,15 @@
 import styled from 'styled-components'
 
 export const BlogContainer = styled.div`
-    margin: 2rem auto;
-    padding: 0 1rem;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
+    height: 100%;
+`
+
+export const Description = styled.div`
+    height: 100%;
+    margin-bottom: 0.5rem;
 `
 
 export const BlogHeader = styled.section<{ breakpointSize: number }>`
@@ -12,6 +17,7 @@ export const BlogHeader = styled.section<{ breakpointSize: number }>`
         color: black;
         font-size: 3rem;
     }
+
     h3 {
         color: rgb(69, 73, 99);
         line-height: 2rem;
@@ -28,9 +34,10 @@ export const BlogHeader = styled.section<{ breakpointSize: number }>`
 `
 
 export const HighlightListContainer = styled.div<{ breakpointSize: number }>`
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: start;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 1.5rem;
 
     @media (max-width: ${props => props.breakpointSize}px) {
         justify-content: space-evenly;
@@ -40,14 +47,10 @@ export const HighlightListContainer = styled.div<{ breakpointSize: number }>`
 export const HighlightCardContainer = styled.div<{ breakpointSize: number }>`
     border: 1px solid rgba(52, 61, 68, 0.05);
     box-shadow: 0px 1px 2px rgba(52, 61, 68, 0.1);
-    max-width: 25vw;
-    grid-column: 1/4;
     padding: 0 1.5rem;
     display: flex;
     flex-direction: column;
     border-radius: 6px;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
 
     &::before {
         position: absolute;
@@ -78,7 +81,8 @@ export const HighlightCardContainer = styled.div<{ breakpointSize: number }>`
 `
 
 export const Title = styled.h3`
-    height: 70%;
+    font-weight: bolder;
+    color: black;
 `
 
 export const Metadata = styled.div`

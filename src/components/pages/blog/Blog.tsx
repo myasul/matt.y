@@ -11,7 +11,7 @@ export const Blog = ({ highlights }: { highlights: PostPlain[] }) => {
         <Layout>
             <BlogContainer>
                 <BlogHeader breakpointSize={BreakPoint.MinimumMedium - 1}>
-                    <h1>Latest Posts</h1>
+                    <h1>Posts</h1>
                 </BlogHeader>
                 <HighlightList highlights={highlights} />
             </BlogContainer>

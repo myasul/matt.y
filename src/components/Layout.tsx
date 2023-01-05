@@ -51,6 +51,7 @@ const LayoutBody = styled.div`
     min-height: 100vh;
     justify-content: center;
     align-items: center;
+    flex-grow: 1;
 `
 
 const LayoutChildrenContainer = styled.div<{
@@ -59,7 +60,6 @@ const LayoutChildrenContainer = styled.div<{
 }>`
     display: flex;
     justify-content: center;
-    align-items: center;
     max-width: ${props => props.maxWidth}px;
     margin-top: ${props => props.marginTop}px;
     flex: 1;
@@ -108,7 +108,7 @@ export const Layout = ({ children }: Props) => {
                 />
                 <LayoutChildrenContainer
                     maxWidth={SITE_MAX_WIDTH}
-                    marginTop={30}
+                    marginTop={HEADER_HEIGHT}
                 >
                     {children}
                 </LayoutChildrenContainer>

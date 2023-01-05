@@ -4,7 +4,7 @@ import { BreakPoint } from '../../../lib/utils/breakpoints'
 import { DateUtil } from '../../../lib/utils/DateUtil'
 import { PostPlain } from '../../../types/post'
 
-import { HighlightCardContainer, Metadata, Title } from './styles'
+import { Description, HighlightCardContainer, Metadata, Title } from './styles'
 
 export const HighlightCard = ({ highlight }: { highlight: PostPlain }) => {
     const handleClick = () => { void navigate(`/blog/${highlight.slug}`) }
@@ -15,6 +15,7 @@ export const HighlightCard = ({ highlight }: { highlight: PostPlain }) => {
             breakpointSize={BreakPoint.MinimumMedium - 1}
         >
             <Title>{highlight.title}</Title>
+            <Description>{highlight.description}</Description>
             <Metadata>
                 <h6>{DateUtil.toAbbrevDateTime(new Date(highlight.published))}</h6>
             </Metadata>
