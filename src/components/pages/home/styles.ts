@@ -16,6 +16,13 @@ export const Introduction = styled.section<{breakpointSize: number}>`
 
     @media (max-width: ${props => props.breakpointSize}px) {
         width: 100%;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+            margin-block-start: 1rem;
+            margin-block-end: 1rem;
+        }
     }
 `
 
@@ -51,6 +58,8 @@ export const HomeContainer = styled.main<{breakpointSize: number}>`
 
     @media (max-width: ${props => props.breakpointSize}px) {
         margin-top: 0;
+        margin-right: 1rem;
+        margin-left: 1rem;
     }
 `
 

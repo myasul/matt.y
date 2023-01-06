@@ -74,11 +74,6 @@ export const HighlightCardContainer = styled.div<{ breakpointSize: number }>`
         cursor: pointer;
         transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) 0s;
     }
-
-    @media (max-width: ${props => props.breakpointSize}px) {
-        width: 100%;
-        max-width: 100%;
-    }
 `
 
 export const Title = styled.h3`

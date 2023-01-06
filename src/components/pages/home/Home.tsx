@@ -5,7 +5,12 @@ import { BreakPoint } from '../../../lib/utils/breakpoints'
 import { Post } from '../../../types/post'
 import { Layout } from '../../Layout'
 import { HighlightList } from '../blog/HighlightList'
-import { AuthorImageContainer, BlogSectionContainer, HomeContainer, Introduction } from './styles'
+import {
+    AuthorImageContainer,
+    BlogSectionContainer,
+    HomeContainer,
+    Introduction
+} from './styles'
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 import { AuthorInfo } from '../../../types/siteMetadata'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
@@ -20,12 +25,12 @@ type Props = {
 export const Home = ({ highlights, description, authorImage, authorInfo }: Props) => {
     return (
         <Layout>
-            <HomeContainer breakpointSize={BreakPoint.MinimumMedium - 1}>
+            <HomeContainer breakpointSize={BreakPoint.MinimumLarge - 1}>
                 <Introduction breakpointSize={BreakPoint.MinimumMedium - 1}>
-                    <div>
+                    <section>
                         <h1>Hey, I&apos;m {authorInfo.nickname}!</h1>
                         <MDXRenderer>{description}</MDXRenderer>
-                    </div>
+                    </section>
                     <AuthorImageContainer>
                         <GatsbyImage
                             alt={`${authorInfo.nickname}'s picture`}

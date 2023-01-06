@@ -58,7 +58,6 @@ export const Title = styled.h1<{ breakpointSize: number }>`
     color: black;
 
     @media (max-width: ${props => props.breakpointSize}px) {
-        width: 80%;
         font-size: 2.3rem;
     }
 `

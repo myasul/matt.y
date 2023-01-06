@@ -33,8 +33,10 @@ const HeaderItems = styled.div`
     }
 `
 
-const HeaderBody = styled.div<{width: number}>`
-    min-width: ${props => props.width}px;
+const HeaderBody = styled.div<{maxWidth: number}>`
+    max-width: ${props => props.maxWidth}px;
+    width: 100%;
+    margin: 0 1rem;
     display: flex;
     justify-content: space-between;
     font-family: "DM Mono", serif;
@@ -53,7 +55,7 @@ const HeaderBody = styled.div<{width: number}>`
 export const Header = ({ title, height, bodyWidth }: Props) => {
     return (
         <HeaderContainer height={height}>
-            <HeaderBody width={bodyWidth}>
+            <HeaderBody maxWidth={bodyWidth}>
                 <h2><Link to='/'>{title}</Link></h2>
                 <HeaderItems>
                     <h2><Link to='/blog'>Blog</Link></h2>

@@ -1,6 +1,6 @@
 ---
 title: 'Sort effectively: Understanding Array.prototype.sort()'
-description: Don't get caught off guard! You don't know when you'll need to sort a list of complicated objects. Know the ins and outsof `Array.prototype.sort()`.
+description: Don't get caught off guard! You don't know when you'll need to sort a list of complicated objects. Know the ins and outs of Array.prototype.sort().
 published: 2022-03-19
 slug: sort-effectively
 thumbnail: "./images/thumbnail.png"
