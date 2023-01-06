@@ -1,9 +1,9 @@
 import React from 'react'
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
-import { Layout } from '../../Layout'
-import { AboutMeta } from './AboutMeta'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
+import { BreakPoint } from '@lib/utils/breakpoints'
+import { Layout } from '@components/Layout'
 import { AuthorInfo } from './types'
 import {
     AboutContainer,
@@ -12,7 +12,7 @@ import {
     AboutIntro,
     AboutBody
 } from './styles'
-import { BreakPoint } from '../../../lib/utils/breakpoints'
+import { AboutMeta } from './AboutMeta'
 
 type Props = {
     authorDescriptionBody: string

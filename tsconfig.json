@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+        "baseUrl": ".",
         "allowJs": false,
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,
@@ -11,9 +12,31 @@
         "sourceMap": true,
         "noImplicitAny": true,
         "resolveJsonModule": true,
-        "lib": ["ES2015", "DOM"],
-        "strictNullChecks": true
+        "lib": [
+            "ES2015",
+            "DOM"
+        ],
+        "strictNullChecks": true,
+        "paths": {
+            "@components/*": [
+                "src/components/*"
+            ],
+            "@pages/*": [
+                "src/pages/*"
+            ],
+            "@lib/*": [
+                "src/lib/*"
+            ],
+            "@shared-types/*": [
+                "src/types/*"
+            ]
+        }
     },
-    "exclude": ["node_modules", "**/node_modules/*"],
-    "include": ["src/**/*"]
+    "exclude": [
+        "node_modules",
+        "**/node_modules/*"
+    ],
+    "include": [
+        "src/**/*"
+    ]
 }

@@ -1,9 +1,9 @@
 import * as React from 'react'
 import { Instagram, Facebook, GitHub, Linkedin } from 'react-feather'
 import styled from 'styled-components'
-import { BreakPoint } from '../lib/utils/breakpoints'
+import { BreakPoint } from '@lib/utils/breakpoints'
 
-import { AuthorInfo } from '../types/siteMetadata'
+import { AuthorInfo } from '@shared-types/siteMetadata'
 
 type Props = {
     authorInfo: AuthorInfo

@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { graphql } from 'gatsby'
 import { getImage, IGatsbyImageData, ImageDataLike } from 'gatsby-plugin-image'
 
-import { AuthorInfo } from '../../components/pages/about/types'
-import About from '../../components/pages/about/About'
-import { Layout } from '../../components/Layout'
+import { AuthorInfo } from '@components/pages/about/types'
+import About from '@components/pages/about/About'
+import { Layout } from '@components/Layout'
 
 interface Edge {
     node: {

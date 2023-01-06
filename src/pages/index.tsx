@@ -1,9 +1,10 @@
 import { graphql } from 'gatsby'
 import { getImage, IGatsbyImageData, ImageDataLike } from 'gatsby-plugin-image'
 import React, { useEffect, useState } from 'react'
-import { Home } from '../components/pages/home/Home'
-import { Post } from '../types/post'
-import { AuthorInfo } from '../types/siteMetadata'
+
+import { Home } from '@components/pages/home/Home'
+import { Post } from '@shared-types/post'
+import { AuthorInfo } from '@shared-types/siteMetadata'
 
 type Edge = {
     node: {

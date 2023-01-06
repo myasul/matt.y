@@ -1,8 +1,9 @@
 import { navigate } from 'gatsby'
 import React from 'react'
-import { BreakPoint } from '../../../lib/utils/breakpoints'
-import { DateUtil } from '../../../lib/utils/DateUtil'
-import { PostPlain } from '../../../types/post'
+
+import { BreakPoint } from '@lib/utils/breakpoints'
+import { DateUtil } from '@lib/utils/DateUtil'
+import { PostPlain } from '@shared-types/post'
 
 import { Description, HighlightCardContainer, Metadata, Title } from './styles'
 

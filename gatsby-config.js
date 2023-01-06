@@ -75,6 +75,17 @@ module.exports = {
                 resolvePages: ({ pages: { nodes: allPages } }) => allPages,
                 serialize: ({ path }) => ({ url: path })
             }
+        },
+        {
+          resolve: `gatsby-alias-imports`,
+          options: {
+            aliases: {
+              "@components": "src/components",
+              "@pages": "src/pages",
+              "@lib": "src/lib",
+              "@types": "src/types"
+            }
+          }
         }
     ]
 }

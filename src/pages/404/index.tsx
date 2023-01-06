@@ -1,8 +1,9 @@
 import { Link } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
-import { Layout } from '../../components/Layout'
-import { BreakPoint } from '../../lib/utils/breakpoints'
+
+import { Layout } from '@components/Layout'
+import { BreakPoint } from '@lib/utils/breakpoints'
 
 const Container = styled.main<{ breakpointSize: number }>`
     display: flex;

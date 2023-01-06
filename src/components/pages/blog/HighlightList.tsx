@@ -2,8 +2,8 @@ import React from 'react'
 
 import { HighlightListContainer } from './styles'
 import { HighlightCard } from './HighlightCard'
-import { BreakPoint } from '../../../lib/utils/breakpoints'
-import { PostPlain } from '../../../types/post'
+import { BreakPoint } from '@lib/utils/breakpoints'
+import { PostPlain } from '@shared-types/post'
 
 type Props = {
     highlights: PostPlain[]

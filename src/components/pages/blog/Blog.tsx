@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { Layout } from '../../Layout'
+import { BreakPoint } from '@lib/utils/breakpoints'
+import { PostPlain } from '@shared-types/post'
+import { Layout } from '@components/Layout'
 import { HighlightList } from './HighlightList'
 import { BlogContainer, BlogHeader } from './styles'
-import { BreakPoint } from '../../../lib/utils/breakpoints'
-import { PostPlain } from '../../../types/post'
 
 export const Blog = ({ highlights }: { highlights: PostPlain[] }) => {
     return (

@@ -8,7 +8,7 @@ import '@fontsource/fira-mono'
 import { Header } from './Header'
 import { LayoutMeta } from './LayoutMeta'
 import { Footer } from './Footer'
-import { SiteInfo, AuthorInfo } from '../types/siteMetadata'
+import { SiteInfo, AuthorInfo } from '@shared-types/siteMetadata'
 
 const GlobalStyle = createGlobalStyle`
     body {

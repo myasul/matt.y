@@ -1,19 +1,19 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 
-import { BreakPoint } from '../../../lib/utils/breakpoints'
-import { Post } from '../../../types/post'
-import { Layout } from '../../Layout'
-import { HighlightList } from '../blog/HighlightList'
+import { BreakPoint } from '@lib/utils/breakpoints'
+import { Post } from '@shared-types/post'
+import { Layout } from '@components/Layout'
+import { HighlightList } from '@components/pages/blog/HighlightList'
 import {
     AuthorImageContainer,
     BlogSectionContainer,
     HomeContainer,
     Introduction
 } from './styles'
-import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
-import { AuthorInfo } from '../../../types/siteMetadata'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
+import { AuthorInfo } from '@shared-types/siteMetadata'
 
 type Props = {
     highlights: Post[]
