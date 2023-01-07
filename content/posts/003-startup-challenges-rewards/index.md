@@ -37,15 +37,15 @@ Expect to do tasks that multiple teams in a large company will typically do.
 
 ### 🤹🏼 Self-management
 
-The team leader of the software team is also the CTO. Throughout the day, he writes and reviews code, attends meetings, and designs the next feature on our pipeline. He doesn't have time to check up on me and my work every minute of every hour, especially now that we are all working from home.
+The team leader of the software team is also the CTO. Throughout the day, he writes and reviews code, attends meetings, and designs the next feature on our pipeline. He doesn't have time to check up on me and my work every minute of every hour, especially now that we are all working from home. 
 
-I am expected to finish the work I have given within the time we have estimated for it to be completed. I am expected to ask questions when I have something I don't know. I am expected to reach out to my colleagues whenever I am blocked. Everyone in our team has a role to play, and we are expected to do it regardless if no one else is looking. In a startup, you need to be accountable for your work and the time you put into it.
+Therefore, I am expected to finish the work I have given within the time we have estimated for it to be completed, to ask questions when I have something I don't know, and to reach out to my colleagues whenever I am blocked. Everyone in our team has a role to play, and we are expected to do it regardless if no one else is looking. In a startup, you need to be accountable for your work and the time you put into it.
 
 ### ⏰ Long hours
 
-As much as possible, our team discourages working over 9 hours. We meticulously groom (list out all the things needed for the task to be completed) our tasks and put conservative estimates on them. But there are time where we need to complete a feature on a tight deadline, or you don't have enough knowledge and experience with the task assigned to you, or you need to deploy the latest version at a weird time. These scenarios may force you to work longer hours.
+As much as possible, our team discourages working over 9 hours. We meticulously groom (list out all the things needed for the task to be completed) our tasks and put conservative estimates on them. But there are times when we need to complete a feature on a tight deadline, you don't have enough knowledge and experience with your task, or you need to deploy the latest version at a weird time. These scenarios may require you to work longer hours.
 
-I was once assigned to make our web-based mobile app work offline since our users will likely be in areas with weak or no signal. I had no experience in this area, and the documentation and tutorials were scarce. But I did what needed to be done and spent time learning and experimenting. It took a lot of time to understand and make it work, but it was all worth it in the end (the feature significantly improved user experience!).
+I was once assigned to make our web-based mobile app work offline since our users will likely be in areas with weak or no signal. I had no experience in this area, and the documentation and tutorials were scarce. But I did what ought to be done and spent time learning and experimenting. It took a lot of time to understand and make it work, but it was all worth it in the end (the feature significantly improved user experience!).
 
 ### ❓ Endless unknowns
 
