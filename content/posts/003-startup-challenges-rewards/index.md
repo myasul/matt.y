@@ -1,5 +1,5 @@
 ---
-title: The Challenges and Rewards of working in a Startup Company
+title: The challenges and rewards of working in a startup company
 description: When I say startups, you might think about bean bag chairs, pingpong tables, free gym membership, and free food. It's really cool and all but that's only the tip of the iceberg.
 published: 2023-01-07
 slug: startup-challenges-rewards
