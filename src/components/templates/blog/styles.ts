@@ -6,7 +6,10 @@ const PrismStyles = css`
      * and overflow that we removed from <pre>.
      */
     .gatsby-highlight {
-      /* padding: 1em; */
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     /**
@@ -18,6 +21,9 @@ const PrismStyles = css`
      */
     .gatsby-highlight pre[class*="language-"] {
       border-radius: 10px;
+      padding: 0.5rem;
+      white-space: break-spaces;
+      word-break: break-all;
     }
 
     .gatsby-highlight-code-line {
@@ -56,6 +62,7 @@ export const Title = styled.h1<{ breakpointSize: number }>`
     text-align: left;
     width: 100%;
     color: black;
+    word-break: break-word;
 
     @media (max-width: ${props => props.breakpointSize}px) {
         font-size: 2.3rem;
@@ -68,18 +75,27 @@ export const TitleMeta = styled.div`
 `
 
 export const BlogContainer = styled.article<{ breakpointSize: number }>`
-    margin: 0 auto;
-    padding: 0 1rem;
-    margin-top: 3rem;
     display: grid;
     grid-template-columns: 1fr min(80ch, 100%) 1fr;
+
     * {
         grid-column: 2;
     }
 
+    code, pre {
+        white-space: break-spaces !important;
+        width: 95%;
+        overflow-x: auto;
+    }
+
+    pre > code {
+        display: block;
+        word-wrap: break-word;
+        word-break: break-word;
+    }
+
     @media (max-width: ${props => props.breakpointSize}px) {
-        margin: 0 2rem;
-        padding: 0;
+        grid-template-columns: 1fr min(80ch, 90%) 1fr;
     }
 
     ${PrismStyles}

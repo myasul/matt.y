@@ -8,8 +8,6 @@ thumbnail: "./images/thumbnail.png"
 type: post
 ---
 
-### Introduction
-
 Indeed, you don't know what you don't know. I never thought there would be a ton of use cases of Regex before the time that I've known how to use them. Now that I have an idea of how to use regex, it's like a new world out there (you might think that I'm exaggerating but trust me, I'm not.). I would just like to share a few of the many instances that I used regex at work. I hope that it will help you when you stumble into similar scenarios.
 
 ### What is Regex

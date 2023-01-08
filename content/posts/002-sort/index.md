@@ -15,7 +15,7 @@ In this article, I will do my best to explain how you can sort strings, numbers,
 
 If you have an array of strings, you can easily call the `sort()` method to sort the array in ascending order.
 
-```javascript
+```typescript
 const names = ['Matthew', 'Mark', 'Luke', 'John']
 const sortedNames = names.sort()
 
@@ -32,7 +32,7 @@ Alright! You now know how to sort strings in ascending order, but how would you 
 
 If you have an array of numbers and try to call `sort()`, you would notice that it may behave differently from what you expect.
 
-```javascript
+```typescript
 const numbers = [10, 5, 2, 43, 16, 25]
 const sortedNumbers = numbers.sort()
 
@@ -42,33 +42,33 @@ console.log(sortedNumbers) // [10, 16, 2, 25, 43, 5]
 You would think that `2` should be the first number on the sorted array, but because numbers are converted to strings, `10` and `16` come before `2` in the Unicode order. Not to fear, we can supply a compare function to suit our needs!
 
 The compare function has the following form:
-```javascript
+```typescript
 function compare(a, b) {
-  if (a should come first before b) {
-    return -1; // Or any negative number
-  }
+    if (a should come first before b) {
+      return -1; // Or any negative number
+    }
 
-  if (b should come first before a) {
-    return 1; // Or any positive number
-  }
+    if (b should come first before a) {
+      return 1; // Or any positive number
+    }
 
-  // a and b should remain in-place
-  return 0;
+    // a and b should remain in-place
+    return 0;
 }
 ```
 
 Let's try to sort numbers with a compare function!
 ```typescript
 function compareInAscendingOrder (a, b) {
-  if (a > b) {
-    return 1
-  }
+    if (a > b) {
+      return 1
+    }
     
-  if (a < b) {
-    return -1
-  }
+    if (a < b) {
+      return -1
+    }
     
-  return 0;
+    return 0;
 }
 
 const numbers = [10, 5, 2, 43, 16, 25]
@@ -80,7 +80,7 @@ console.log(sortedNumbers) // [2, 5, 10, 16, 25, 43]
 It got sorted correctly! Let us break it down. If you wanted to sort it in ascending order, you want the lower number to come first, so if a higher number comes first before a lower number, you want to swap them. The compare function exactly does this if you. If you switch the values, meaning `b` comes first before `a`; return a positive number otherwise return a negative number. In `compareInAscendingOrder` function above, a swap would happen if `a` is larger than `b`. So if `a` is 5 and `b` is 4, the function will swap them and sort them ascendingly.
 
 We can further refactor the code to:
-```javascript
+```typescript
 const sortedAscendingly = number.sort((a, b) => a - b)
 
 console.log(sortedNumbers) // [2, 5, 10, 16, 25, 43]
@@ -88,7 +88,7 @@ console.log(sortedNumbers) // [2, 5, 10, 16, 25, 43]
 
 If `a` is smaller than `b` the result will always be negative (3 -5 = -2). But if `a` is larger than `b` the result will be a positive number, meaning the values would be swapped. You just need to subtract `b` with `a` to sort it in descending order.
 
-```javascript
+```typescript
 const sortedDescendingly = number.sort((a, b) => b - a)
 
 console.log(sortedDescendingly) // [43, 25, 16, 10, 5, 2]
@@ -97,7 +97,7 @@ console.log(sortedDescendingly) // [43, 25, 16, 10, 5, 2]
 ## Sorting an array of objects
 
 Now we know how to use a compare function it is extremely easy for us to sort objects. So what if we what to sort an array of student objects:
-```javascript
+```typescript
 const students = [
     { name: 'Peter Parker', age: 21 },
     { name: 'Tony Stark', age: 24 },
@@ -109,7 +109,7 @@ const students = [
 
 We need to provide a comparator that we will use to compare each object in the array. In the array of objects above, we can use either the name or age property as a comparator.
 
-```javascript
+```typescript
 const sortFromYoungestToOldest = (previousStudent, incomingStudent) => {
    return previousStudent.age - incomingStudent.age
 }
@@ -132,7 +132,7 @@ Just for fun and for deeper understanding, would it be cool to implement our own
 
 If you have not fully grasped how insertion sort works yet, I will just leave it as a fun assignment! It took me a whole hour to understand it! But in the code shown below is an example of how you can implement your own sort function using insertion sort! It also accepts a compare function, so you can sort strings, numbers, and objects in the order you prefer.
 
-```javascript
+```typescript
 function insertionSort (array: any[], compareFunc: (a: any, b: any) => number) {
     for (const [outerIndex, value] of array.entries()) {
         if (outerIndex === 0) continue
