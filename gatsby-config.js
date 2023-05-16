@@ -5,6 +5,7 @@
  */
 
 const { siteUrl } = require('./gatsby/config/site-metada')
+const vsCodeRemarkPlugin = require('gatsby-remark-vscode').remarkPlugin
 
 require('dotenv').config({ path: '.env' })
 
@@ -32,6 +33,14 @@ module.exports = {
             resolve: `gatsby-plugin-mdx`,
             options: {
                 extensions: [`.mdx`, `.md`],
+                remarkPlugins: [
+                 vsCodeRemarkPlugin,
+                 {
+                   theme: {
+                     default: "Abyss"
+                   }
+                 },
+                ],
                 gatsbyRemarkPlugins: [
                     `gatsby-remark-smartypants`,
                     {
@@ -40,13 +49,6 @@ module.exports = {
                             maxWidth: 590,
                             linkImagesToOriginal: true,
                             quality: 100
-                        }
-                    },
-                    {
-                        resolve: `gatsby-remark-prismjs`,
-                        options: {
-                            showLineNumbers: false,
-                            noInlineHighlight: false
                         }
                     }
                 ]

@@ -1,61 +1,4 @@
-import styled, { css } from 'styled-components'
-
-const PrismStyles = css`
-     /**
-     * Add back the container background-color, border-radius, padding, margin
-     * and overflow that we removed from <pre>.
-     */
-    .gatsby-highlight {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    /**
-     * Remove the default PrismJS theme background-color, border-radius, margin,
-     * padding and overflow.
-     * 1. Make the element just wide enough to fit its content.
-     * 2. Always fill the visible space in .gatsby-highlight.
-     * 3. Adjust the position of the line numbers
-     */
-    .gatsby-highlight pre[class*="language-"] {
-      border-radius: 10px;
-      padding: 0.5rem;
-      white-space: break-spaces;
-      word-break: break-all;
-    }
-
-    .gatsby-highlight-code-line {
-      background-color: #feb;
-      display: block;
-      margin-right: -1em;
-      margin-left: -1em;
-      padding-right: 1em;
-      padding-left: 0.75em;
-    }
-
-    /* Adjust the position of the line numbers */
-    .gatsby-highlight pre[class*="language-"].line-numbers {
-      padding-left: 3em;
-      margin: 1rem 0;
-    }
-
-    .gatsby-highlight pre[class*="language-"] span.line-numbers-rows {
-       padding: 1rem 0.5rem !important;
-       left: 10px !important;
-       top: 0;
-       border: 0;
-    }
-
-    code.language-text {
-        background: #F0F0F0;
-        color: #334259;
-        padding: 2px 8px;
-        margin: 0px 4px;
-    }
-
-`
+import styled from 'styled-components'
 
 export const Title = styled.h1<{ breakpointSize: number }>`
     font-size: 3.5rem;
@@ -77,26 +20,19 @@ export const TitleMeta = styled.div`
 export const BlogContainer = styled.article<{ breakpointSize: number }>`
     display: grid;
     grid-template-columns: 1fr min(80ch, 100%) 1fr;
+    font-size: 1.1rem;
+    font-weight: 100;
 
     * {
         grid-column: 2;
     }
 
-    code, pre {
-        white-space: break-spaces !important;
-        width: 95%;
-        overflow-x: auto;
-    }
-
-    pre > code {
-        display: block;
-        word-wrap: break-word;
-        word-break: break-word;
+    pre {
+        font-size: 0.9rem;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
 
     @media (max-width: ${props => props.breakpointSize}px) {
         grid-template-columns: 1fr min(80ch, 90%) 1fr;
     }
-
-    ${PrismStyles}
 `

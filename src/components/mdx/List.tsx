@@ -1,5 +1,5 @@
 import styled from 'styled-components'
 
 export const List = styled.li`
-    margin: 1rem 0;
+    margin: 0.5rem 0;
 `

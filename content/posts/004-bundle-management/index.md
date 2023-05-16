@@ -31,7 +31,7 @@ The information provided by this plugin will help you identify code that you can
 
 You need to install the plugin as a dev dependency. You also be installing `cross-env`. It will enable you to set environment variables regardless of the platform you run the codebase with. To install all dependencies, just run the command below:
 
-```shell
+```sh
 # NPM 
 npm install --save-dev @next/bundle-analyzer cross-env
 
@@ -43,18 +43,22 @@ After you've installed the packages, you need to add the following code inside y
 
 ```javascript
 // For <= NextJS v11
+// highlight-start
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 })
+// highlight-end
 
 module.exports = withBundleAnalyzer({
   // your Next.js configuration
 })
 
 // For >= NextJS v12
+// highlight-start
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
     enabled: process.env.ANALYZE === 'true'
 })
+// highlight-end
 
 module.exports = (phase, { defaultConfig }) => {
     const nextConfig = {
@@ -69,7 +73,6 @@ You can add the following code to your `package.json` to make it easier to run a
 
 ```json
 "scripts": {
-    ...
     "analyze": "cross-env ANALYZE=true next build"
 },
 ```
