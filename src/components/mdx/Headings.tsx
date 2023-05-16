@@ -17,8 +17,8 @@ export const SubTitle = styled.h2`
 
 export const H3 = styled.h3`
     color: black;
-    font-size: 1.6rem;
-    font-weight: bolder;
+    font-size: 1.5rem;
+    font-weight: 500;
     text-align: left;
     margin: 2rem 0 0 0;
 `
