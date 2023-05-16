@@ -123,7 +123,7 @@ It was extremely helpful when we were looking for a replacement for `typescript-
 ## Dependency List
 We use different kinds of third-party packages to help us develop our applications. We keep the list of packages we use in packages.json. Three dependency lists can be found in packages.json. These are `dependencies`, `devDependencies`, and `peerDependencies`. Knowing the differences between these lists is essential to ensure we don't add irrelevant packages to our bundle. This [article](https://www.geeksforgeeks.org/difference-between-dependencies-devdependencies-and-peerdependencies/) goes in-depth in explaining the differences between the three lists.
 
-Here are several key points that our team applied to our codebase:
+Here are several key points that our team applied to our codebase: 
 - Ensure you don't add packages only used in development in the dependencies list. If the package is only used for development, like Cypress or Storybook for testing, or during compilation, like Babel or webpack, that package belongs to the devDependencies list.  
 We had an issue before where `jest` was included in our bundle. It is incorrect since `jest` is used for unit testing.
 
@@ -182,7 +182,9 @@ To manually exclude a package, you need to follow these steps:
 We covered a lot! After we had done all the optimizations above, we decreased our bundle size from 1.01MB to 593 MB. That's a >40% bundle reduction. We also increased our lighthouse performance score from 45 to 79!
 
 ![NextJS Bundle Information After Optimization](images/after-opt-build.png)
+
 ![Before Optimization Performance](images/before-opt-performance.png)
+
 ![After Optimization Performance](images/after-opt-performance.png)
 
 To summarize, here are the steps we take to manage and optimize our bundle size:

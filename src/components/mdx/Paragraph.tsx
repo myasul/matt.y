@@ -6,5 +6,6 @@ export const Paragraph = styled.p`
     line-height: 1.8rem;
     font-size: 1.1rem;
     font-weight: 100;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 `
