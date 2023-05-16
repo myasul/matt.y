@@ -10,8 +10,10 @@ export const Introduction = styled.section<{breakpointSize: number}>`
         font-size: 4rem;
     }
 
-    h3 {
+    span {
         line-height: 2rem;
+        font-weight: 500;
+        font-size: 1.2rem;
     }
 
     @media (max-width: ${props => props.breakpointSize}px) {

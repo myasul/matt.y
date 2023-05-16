@@ -29,7 +29,9 @@ export const Home = ({ highlights, description, authorImage, authorInfo }: Props
                 <Introduction breakpointSize={BreakPoint.MinimumMedium - 1}>
                     <section>
                         <h1>Hey, I&apos;m {authorInfo.nickname}!</h1>
-                        <MDXRenderer>{description}</MDXRenderer>
+                        <span>
+                            <MDXRenderer>{description}</MDXRenderer>
+                        </span>
                     </section>
                     <AuthorImageContainer>
                         <GatsbyImage

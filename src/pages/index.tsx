@@ -80,7 +80,7 @@ export const homeQuery = graphql`
             frontmatter {
                 featured {
                     childImageSharp {   
-                        gatsbyImageData(width: 350, layout: FIXED)
+                        gatsbyImageData(width: 350, layout: FIXED, placeholder: BLURRED)
                     }
                 }
             }
