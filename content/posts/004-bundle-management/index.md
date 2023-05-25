@@ -1,5 +1,5 @@
 ---
-title: NextJS Bundle Analysis and Management
+title: NextJS Bundle Management 101
 description: This article will provide the steps we've taken to reduce our bundle size by almost 50%!
 published: 2023-05-16
 slug: nextjs-bundle-management
