@@ -59,7 +59,7 @@ You must be unrelenting and innovative. Always remember that Google Search is yo
 
 ## 🥇 The Rewards
 
-![Standup](images/damo-matt-meetup.jpg)
+![In-person software team standup!](images/damo-matt-meetup.jpg)
 
 You might feel scared now that you know the challenges you will face when working for a startup, but as they say, you will reap what you sow. 
 
