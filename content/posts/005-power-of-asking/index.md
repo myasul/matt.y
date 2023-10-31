@@ -9,7 +9,7 @@ type: post
 
 ![Illustrated by Liz Fosslien](images/possibilities-illustration.jpeg)
 
-Like most Filipinos, I am extremely shy and nervous when I want something, especially about work or my career. I tend to focus on the quality of my work and hope that my peers or superiors will notice. I learned the hard way that most of the time, you need to assert yourself for them to take notice. I learned that you need to tell them what you need openly. I wanted to share how being assertive and asking what I want and need opened new doors for me.
+Like most Filipinos, I am extremely shy and nervous when I want something, especially about work or my career. I tend to focus on the quality of my work and hope that my peers or superiors will notice. I learned the hard way that most of the time, you need to assert yourself for them to take notice. I learned that you need to tell them what you need openly. I wanted to share how being assertive and asking for what I want and need opened new doors for me.
 
 ## 🌟 New Opportunities
 
