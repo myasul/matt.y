@@ -9,7 +9,7 @@ type: post
 
 ![Illustrated by Liz Fosslien](images/possibilities-illustration.jpeg)
 
-Like most Filipinos, I am extremely shy and nervous when I want something, especially about work or my career. I tend to focus on the quality of my work and just hope that my peers or superiors will notice. I learned the hard way that most of the time, you need to assert yourself for them to take notice. I learned that you need to tell them what you need openly. I wanted to share how being assertive and asking what I want and need opened new doors for me.
+Like most Filipinos, I am extremely shy and nervous when I want something, especially about work or my career. I tend to focus on the quality of my work and hope that my peers or superiors will notice. I learned the hard way that most of the time, you need to assert yourself for them to take notice. I learned that you need to tell them what you need openly. I wanted to share how being assertive and asking what I want and need opened new doors for me.
 
 ## 🌟 New Opportunities
 
@@ -27,7 +27,7 @@ For the first few years in Okra, I was focused on building our web-based applica
 
 During my one-on-one with my team leader, I asked him if he could give me more back-end-focused features. I didn't expect it, but he was delighted I brought up that subject. He told me it was also in their plans to hone me as a full-stack engineer, and he was happy that I wanted the same thing. Starting that quarter, he gave more and more back-end-focused features. He also included me in design and planning meetings. After N bugs and features, I can confidently say that I can work both on the front-end and back-end side of things!
 
-There will come a time that you'll want to level up, to learn more, but your superiors would only know that you'd like that if you proactively tell them! If that time comes, save your time, ask them if you can take a jab on that new feature, or try a different way to do the work you've always been doing the same way over and over again. It may surprise you that they also want the same thing for you!
+There will come a time that you'll want to level up, and to learn more, but your superiors would only know that you'd like that if you proactively tell them! If that time comes, save your time, ask them if you can take a jab on that new feature, or try a different way to do the work you've always been doing the same way over and over again. It may surprise you that they also want the same thing for you!
 
 ## 🪴 New Experiences
 
@@ -35,7 +35,7 @@ There will come a time that you'll want to level up, to learn more, but your sup
 
 I thought it would be awesome to share with my fellow PH web developers some of the stuff I learned from building production-ready web applications. One way to do that is to write blogs! So, I started this blog and wrote a few of the stuff I learned from work! 
 
-I didn't stop there. I always had stage fright, and I wanted to conquer that fear, so I contacted [ReactJS PH](https://reactjs.org.ph/) and asked if they have a slot for me in any of their upcoming events because I'm willing to do a talk. It's hitting two birds with one stone! I can conquer my stage fright and also share my learnings! They happily gave me a slot and had my talk finalized!
+I didn't stop there. I've always had stage fright, and I wanted to conquer that fear, so I contacted [ReactJS PH](https://reactjs.org.ph/) and asked if they have a slot for me in any of their upcoming events because I'm willing to do a talk. It's hitting two birds with one stone! I can conquer my stage fright and also share my learnings! They happily gave me a slot and had my talk finalized!
 
 Shivering and full of stutters, I finished my first talk (it was about [JS bundle management](https://www.mattyasul.com/blog/nextjs-bundle-management/))! There are a lot of things I still can improve upon, but I'm always glad I did that talk! Many experiences are accessible with a simple request. Knock the door, and it will be opened.
 
@@ -50,4 +50,5 @@ So when the ReactJS PH's Rehackt event was about to finish, I went out of my way
 Building new connections has a lot of benefits, from being up-to-date with the latest trends, sharing ideas, and promoting self-esteem to developing long-lasting relationships. Next time you're in an event, put yourself out there! If you see a group you want to be a part of, ask them if you can join them for lunch or dinner! It's always good to build new connections and make new friends.
 
 ## 🏁 Wrapping Up
+
 If you want to build that new feature, speak up! If you want to get that promotion, speak up! If you want to do that brown bag session, speak up! If you want to be a part of that group, speak up! You'd be surprised with how willing most of the people around you are to help you out. You just need to ask them first. It's up to you to open that door to endless possibilities.
