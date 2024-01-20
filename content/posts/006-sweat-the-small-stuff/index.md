@@ -3,7 +3,6 @@ title: "Sweat the small stuff: how the small nitpicks make the huge difference"
 description: I was fortunate enough to find a mentor. Here are the most important things about writing code that I learned from him.
 published: 2024-01-07
 slug: sweat-the-small-stuff
-thumbnail: "./images/thumbnail.png"
 type: post
 ---
 
