@@ -6,6 +6,8 @@ slug: sweat-the-small-stuff
 type: post
 ---
 
+![Damian redistributing the force to this young padawan](images/damo-matt-meetup.jpg)
+
 Last December, I left the most incredible company I ever worked for, Okra, and moved to New Zealand. During the holiday season, I had the time to ponder and realize how far I've come as a software engineer. It was only possible because I worked for Okra, and Damian was my team lead and mentor.
 
 Damian has been my team leader since day one. Damian has always been meticulous in reviewing code, especially during my early days when my code was ugly as hell. How challenging it might've been to read and review my MRs (merge requests)!
