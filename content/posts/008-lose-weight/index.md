@@ -15,7 +15,7 @@ After my trip to Singapore and the Philippines, I checked my weight again, and t
 
 Then and there, I had my personal "enough is enough" moment. I decided to take my "best version of myself" goal more seriously. If Hollywood stars could transform their bodies with dedication and the right approach, I could too. So I did. Well, I tried.
 
-As of today, I've lost more than 12kg! From my heaviest at 82kg (180.4 lbs), I'm down to 70.35kg (153 lbs)! I thought it might be useful for others looking to lose weight, so I'll share what worked for me. Don't worry, they are really simple!
+As of today, I've lost more than 12kg! From my heaviest at 82kg (180.4 lbs), I'm down to 69.7kg (153 lbs)! I thought it might be useful for others looking to lose weight, so I'll share what worked for me. Don't worry, they are really simple!
 
 ![](images/weightloss-scale.jpg)
 
