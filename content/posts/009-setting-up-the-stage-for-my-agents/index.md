@@ -15,7 +15,7 @@ But my biggest realization is that working with AI agents is closer to managing 
 
 ### Handing the agent a contract
 
-Before I knew about SDD, I used AI as a rubber duck and wrote most of the code myself. When I tried to hand the rails over, the agent over-engineered things or built something subtly off from what I had in mind, and the corrections cost more than just writing the code directly.
+Before I knew about [SDD](https://martinfowler.com/articles/exploring-gen-ai/sdd-3-tools.html), I used AI as a rubber duck and wrote most of the code myself. When I tried to hand the rails over, the agent over-engineered things or built something subtly off from what I had in mind, and the corrections cost more than just writing the code directly.
 
 Everything changed after I started using SDD. The spec is a contract the agent follows, and writing it (with the help of either the agent or [spec-kit](https://github.com/github/spec-kit)) forces me to think the feature through before any code is written. The user stories give me something I can hand to my lead and ask, "Is this what you expect?"
 
@@ -32,13 +32,12 @@ As software engineers, we have many responsibilities beyond writing code. We cre
 
 But as they say, work smarter, not harder. Luckily, we can ask our agents to do the heavy lifting for us either through MCP servers or CLI tools. The ones I use the most are:
 
-- Linear MCP for creating and updating tickets. I rarely write a ticket manually anymore. Once I've finalized the implementation details from planning, I ask the agent to draft the ticket. And because it already has the context, the details all land on the ticket without me having to repeat them.
+- [Linear MCP](https://linear.app/docs/mcp) for creating and updating tickets. I rarely write a ticket manually anymore. Once I've finalized the implementation details from planning, I ask the agent to draft the ticket. And because it already has the context, the details all land on the ticket without me having to repeat them.
   
-- GitHub CLI (`gh`) for any GitHub-related actions. Pair it with a PR template, and you'll never write a PR description manually again.
+- [GitHub CLI](https://cli.github.com/) (`gh`) for any GitHub-related actions. Pair it with a PR template, and you'll never write a PR description manually again.
 
-- Playwright CLI for regression testing. Whenever I fixed a bug, I would usually test the main scenario to ensure the fix works and ask the agent to come up with related edge cases on its own, and have it run against a real browser. It comes back with a report that includes what it covered, what passed, and what didn't.
-  ![[Pasted image 20260524110534.png]]
-   _Sample regression report from a bug fix in our filter engine._
+- [Playwright CLI](https://playwright.dev/agent-cli/introduction) for regression testing. Whenever I fixed a bug, I would usually test the main scenario to ensure the fix works and ask the agent to come up with related edge cases on its own, and have it run against a real browser. It comes back with a report that includes what it covered, what passed, and what didn't.
+  ![Sample regression report from a bug fix in our filter engine.](images/passing-test.png)
 
 There are a lot of MCP servers and CLI tools out there, and it can feel overwhelming. A good way to figure out what you actually need is to list the tools and services you use daily, JIRA, Confluence, Slack, whatever, and check if they have either an MCP server or a CLI tool (they usually do). Being able to delegate the nitty-gritty (ahem, documentation) frees you up to do the things that actually excite (hand me that next tech debt already!).
 
@@ -56,7 +55,7 @@ The ones I use most often are:
 
 - **`ui-component-extraction`** - the cross-repo workflow for extracting generic UI primitives from our React repos into our shared UI library. Codifies the three-phase contract (simplify, move, consume) plus the audit step that decides what's library-worthy vs. what stays app-local.
 
-You can also adopt other people's skills. Playwright CLI ships with one (`playwright-cli install --skills`). Vercel publishes React skills I use whenever I work on the frontend. There are a gazillion skills out there, and you can find them on [https://skills.sh](https://skills.sh/).
+You can also adopt other people's skills. Playwright CLI ships with one (`playwright-cli install --skills`). Vercel publishes React skills I use whenever I work on the frontend. There are a gazillion skills out there, and you can find them on [https://skills.sh](skills.sh/).
 
 Skills solved my problem of repeating myself to the agent. Write it once, and every future session benefits.
 
@@ -65,10 +64,10 @@ Skills solved my problem of repeating myself to the agent. Write it once, and ev
 I kept hitting my Codex token limit from early April 2026, when they [switched from usage credits to token-based rates](https://arc.net/l/quote/wnzaplqc). I had to research how to optimise my token consumption. I found that when you ask an agent to _"refactor the filter engine,"_ it runs a text search (`grep`) for the word "filter" and reads matching files, sometimes in full, and every line containing that string lands in its context. Imagine doing a "find all" in your IDE and reading every match one by one to check whether each is relevant to the task. Those greps ate my tokens for breakfast.
 
 Two tools helped me solve this:
-- **`code-review-graph`** - answers _"if I touch this file, what tests, components, and routes are affected?"_ by pre-computing the dependency graph of the codebase. It's like "Find all references" in your IDE, but smarter.
-  ![[Pasted image 20260524204508.png]]
+- [code-review-graph](https://code-review-graph.com/) - answers _"if I touch this file, what tests, components, and routes are affected?"_ by pre-computing the dependency graph of the codebase. It's like "Find all references" in your IDE, but smarter.
+  ![The difference between the token consumption is 🤯](./images/token-comparison.png)
 
-- **Serena** - gives your agent IDE-like tools. Imagine upgrading the agent from a notepad to Cursor or VS Code. It can do things like _"Go to definition"_ and _"Go to implementations"_ on real symbols rather than text matches.
+- [Serena](https://oraios.github.io/serena/01-about/000_intro.html) - gives your agent IDE-like tools. Imagine upgrading the agent from a notepad to Cursor or VS Code. It can do things like _"Go to definition"_ and _"Go to implementations"_ on real symbols rather than text matches.
 
 As I've been continuously using them, I noticed that it didn't just save me tokens, it also gave me higher-quality output, because the tools filter out the noise that grep would otherwise dump into context. The smaller the context the agent loads, the cheaper the run and the sharper the output.
 ### Building your own tools
