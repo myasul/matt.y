@@ -23,7 +23,9 @@ Take our leaderboard feature: it spanned design, frontend, backend, and our anal
 
 The Claude Code desktop app pairs with this nicely. I rename each spawned agent after the part of the feature it owns, so I can always find my way back to the right conversation without getting lost.
 
-I recently found another use for forking: a "restart" button. Normally, when you make configuration changes, say you edited `.mcp.json` to add an MCP server or update a token, you would need to spawn a new session for these changes to take effect. Fork instead: you get the restart _and_ keep the context.
+I recently found another use for forking: a "restart" button. Normally, when you make configuration changes, say you edited `.mcp.json` to add an MCP server or update a token, you would need to spawn a new session for these changes to take effect. This also applies to MCP servers with local configuration (e.g. we use local LSP servers) Fork instead: you get the restart _and_ keep the context.
+
+![My LSP server successfully restarted after forking](images/serena-server.png)
 
 # ⏮️ `/rewind`
 
