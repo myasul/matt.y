@@ -62,11 +62,11 @@ On the desktop app, it opens a side chat you can keep as its own conversation. I
 
 For me, `/btw`, `/fork`, and `/rewind` are slash commands for my context management toolkit, each having distinct uses:
 
-- **`/btw` is my curiousity quencher.** Every mid-task question that doesn't need tool access goes here. The side chat sees your whole session but can't disturb it.
+- <p><strong>/btw is my curiousity quencher.</strong> Every mid-task question that doesn't need tool access goes here. The side chat sees your whole session but can't disturb it.</p>
 
-- **`/fork` is my parallelization engine** Spawn it when you need full, tool-enabled sessions, parallel deep-dives across a feature, or a context-preserving restart after a config change, without touching the original session.
+- <p><strong>`/fork` is my parallelization engine.</strong> Spawn it when you need full, tool-enabled sessions, parallel deep-dives across a feature, or a context-preserving restart after a config change, without touching the original session.</p>
 
-- **`/rewind` is my pocket time-machine.** Back out of a dead-end approach, and it rolls the conversation _and your code_ (**optional**) back to the checkpoint.
+- <p><strong>`/rewind` is my pocket time-machine.</strong> Back out of a dead-end approach, and it rolls the conversation _and your code_ (**optional**) back to the checkpoint.</p>
 
 The developers who get the most out of Claude Code aren't just the ones with the best prompts. They're also the ones who treat the context window like the scarce resource it is. Every token in there is either signal or noise. These three slash commands are how you keep the ratio in your favour.
 
