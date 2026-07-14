@@ -13,6 +13,8 @@ I work at a [startup](https://drawmorecircles.com/) where most of our features c
 
 But after months of living in Claude Code, I've learned that the real skill isn't just prompting; it's **context management**. Your agent is only ever as good as what's in its head _right now_. The three slash commands I use most are all, at their core, context control-flow: `/fork` branches it, `/rewind` rolls it back, and `/btw` keeps it clean. Let me walk you through how I use each one.
 
+_FYI: these are slash commands, so on the CLI you'd type them straight into the terminal. I mostly live in the Claude Code desktop app, though, so that's the angle I'll show._
+
 # 🔱 `/fork`
 
 When a feature has many moving parts, my most-used slash command is `/fork`. It spawns new agents/chats from a source agent, and each spawned chat carries the source's full context.
@@ -42,6 +44,11 @@ Or scroll up to the message you want to return to and hit its "rewind" button di
 ![](images/rewind-button.png)
 
 # 🤷🏽 `/btw`
+
+```bash
+/btw <your question>
+# /btw what does dogfooding mean?
+```
 
 Curiosity killed the cat; for me, it kills my context. There would be instances where I'm intensely (I hope my boss sees this) working with an agent mid-task, and then it will mention something I don't understand, a phrase I just encountered, an unfamiliar syntax, or some sub-optimal existing code. Curious cat that I am, I ask about it and tumble down the rabbit hole until I understand it fully, wrecking that agent's context on the way.
 
